@@ -1,0 +1,105 @@
+@import '_common';
+.htmleaf-container{
+    width:230px;
+    width:100%;
+    height:630px;
+    .product_sort{
+        margin:20px;
+        width:226px;
+        height:644px;
+        background:#fff 
+        url(../images/img_226x95.jpg) 
+        no-repeat left
+         bottom;
+         position:relative; 
+         z-index:90;     
+        .hd{
+            width:228px;
+            height:52px;
+            background-color: #f92a85;
+            z-index:1;
+            line-height:40px;
+            text-indent:15px;
+            font-size:15px;
+            font-weight:bold;
+            color:#fff;
+            .item{
+                display: block;
+                width: 182px;
+                height:21px;
+                white-space: nowrap;
+                overflow: hidden;
+                .one{
+                    color:#f92c86;
+                    width:78px;
+                    height:17px;
+                }
+            }
+        }
+        .bd{
+            padding-bottom:10px;
+            .item{
+               
+                height:60px;
+                position:relative;
+                .title{
+                    width:226px;
+                    text-indent:43px;
+                    height:30px;
+                    overflow:hidden;
+                    line-height:42px;
+                    font-size:14px;
+                    font-weight:bold;
+                    color:#292929;
+                    a{
+                        color: #fb60a7;
+                        position:relative;
+                        i{
+                            width:19px;
+                            height:19px;
+                            background-position:0 0;
+                            left:-25px;
+                            top:-3px;
+                        }
+                    }
+                }
+                .list{
+                    width:210px;
+                    padding-left:15px;
+                    height:50px;
+                    line-height:20px;
+                    overflow:hidden;
+                    border-bottom:dashed  1px gray;
+                    a{
+                        font-family:"Microsoft YaHei",Arial,sans-serif;
+                        color: #666;
+                        font-size:12px;                       
+                        &:hover{
+                            color: #fb60a7;
+                        }
+                    }
+                }
+                .arrow{
+                    font-family:"Microsoft YaHei",Arial,sans-serif;
+                    font-size:20px; 
+                    color:#c0d7f9;
+                    position:absolute;
+                    right:10px;
+                    top:14px;
+                }
+                .line{
+                    position:absolute;
+                    right:-2px;
+                    top:0px;
+                    width:2px;
+                    height:50px;
+                    background-color:black;
+                    z-index:95;
+                    // display:none;
+                }
+            }
+        }
+
+    }
+  
+}

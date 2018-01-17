@@ -1,0 +1,83 @@
+@import '_common';
+$width:1263px;
+$width2:1100px;
+.header .header-nav .nav .menus .dlsone{
+    display:none;
+}
+.gdlist_wrap{
+    width:100%;
+    height:auto;
+    margin:20px 0;
+    .content{
+        width:$width;
+        height:auto;
+        margin:0 auto;
+        .w1100{
+            width:$width2;
+            margin:0 auto;
+            background:pink;
+            height:50px;
+            .screening{
+                width:100%;
+                height:auto;
+                padding: 0 14px;
+                background: #fff;
+                color: #666;
+                box-sizing:border-box;
+                font-size: 12px;
+                .clearfix{
+                    line-height: 24px;
+                    overflow: hidden;
+                    padding: 8px 0;
+                    position: relative;
+                    border-bottom: 1px dashed #ececec;
+                    .l{
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        float: left;
+                        width: 73px;
+                        padding-right: 14px;
+                        text-align: right;
+                        white-space:nowrap;
+                    }
+                    .r{
+                        float: left;
+                        width: 918px;
+                        height: 24px;
+                        line-height: 24px;
+                        padding-right: 60px;
+                        overflow: hidden;
+                        background:pink;
+                        .contenter{
+                            overflow:hidden;
+                            a{
+                                width: 125px;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                            }
+                        }
+                        .more{
+                            position: absolute;
+                            width: 50px;
+                            height: 24px;
+                            line-height: 24px;
+                            right: 0;
+                            cursor: pointer;
+                            i{
+                                position: absolute;
+                                width: 11px;
+                                height: 6px;
+                                background-position: 0 -87px;
+                                top: 9px;
+                                left: 2.5em;                              
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,200 @@
+body, div, p, h1, h2, h3, h4, h5, h6, hr, ul, ol, li, dd, dt, dl, table, tr, td, fieldset, caption, form, input, img, legend {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #eee;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, li {
+  list-style: none;
+}
+
+img {
+  border: none;
+  vertical-align: bottom;
+}
+
+body {
+  background: white;
+}
+
+.bodybox {
+  width: 100%;
+  height: 100%;
+}
+.bodybox .top {
+  position: relative;
+  padding-top: 75px;
+  height: 502px;
+  margin-top: 20px;
+  width: 965px;
+  height: 577px;
+  margin: 0 auto;
+  position: relative;
+  font-size: 12px;
+  font-family: Verdana,Geneva,sans-serif;
+  color: #666;
+  background: url(../img/load_2.jpg) no-repeat left 112px;
+}
+.bodybox .top .tu_a1 {
+  background: url(../img/load_1.png) no-repeat 0 0;
+  width: 210px;
+  height: 100px;
+  display: block;
+}
+.bodybox .top .tu_a2 {
+  background: url(../img/load_1.png) no-repeat 0 0;
+  width: 210px;
+  height: 100px;
+  display: block;
+}
+.bodybox .top .tu_a3 {
+  background: url(../img/load_1.png) no-repeat 0 0;
+  width: 210px;
+  height: 100px;
+  display: block;
+}
+.bodybox .top .tu a {
+  background-image: none;
+}
+.bodybox .top .login_code {
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  left: 175px;
+  top: 335px;
+}
+.bodybox .top .content {
+  position: absolute;
+  left: 610px;
+  top: 92px;
+  width: 304px;
+  height: 290px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.075);
+  padding: 0 20px 20px 20px;
+}
+.bodybox .top .content .loadtit {
+  width: 304px;
+  height: 60px;
+  line-height: 60px;
+  font-family: \5FAE\8F6F\96C5\9ED1;
+}
+.bodybox .top .content .loadtit .l {
+  float: left;
+  font-size: 20px;
+  color: #f450a2;
+}
+.bodybox .top .content .loadtit .r {
+  width: 210px;
+  height: 60px;
+  float: right;
+  font-size: 12px;
+  color: #f450a2;
+  display: block;
+  position: relative;
+}
+.bodybox .top .content .loadtit .r i {
+  font-style: normal;
+  display: inline-block;
+  text-indent: 40px;
+}
+.bodybox .top .content .loadtit .r .r_a {
+  background-image: none;
+  width: 60px;
+  height: 50px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #666;
+}
+.bodybox .top .content .load_c {
+  width: 304px;
+  height: 156px;
+}
+.bodybox .top .content .load_c .ph_number {
+  clear: both;
+  width: 304px;
+  height: 37px;
+  border: 1px solid #eee;
+  box-shadow: 0 0 2px 1px rgba(207, 207, 207, 0.4) inset;
+}
+.bodybox .top .content .load_c .ph_number .ph_input {
+  display: block;
+  float: left;
+  width: 170px;
+  height: 34px;
+  border: none;
+}
+.bodybox .top .content .load_c .ph_number .ph_img {
+  float: left;
+  width: 54px;
+  height: 37px;
+  background: url(../img/load_5.jpg) no-repeat center center;
+}
+.bodybox .top .content .load_c .phone_code {
+  position: relative;
+  width: 306px;
+  height: 42px;
+  line-height: 42px;
+  margin-top: px;
+}
+.bodybox .top .content .load_c .phone_code .ph_code {
+  width: 130px;
+  height: 42px;
+  outline: none;
+  text-indent: 20px;
+  border: 1px solid #eee;
+  box-shadow: 0 0 2px 1px rgba(207, 207, 207, 0.4) inset;
+}
+.bodybox .top .content .load_c .phone_code .phaaa {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 1px solid #eee;
+  box-shadow: 0 0 2px 1px rgba(207, 207, 207, 0.4) inset;
+  display: block;
+  width: 130px;
+  height: 41px;
+  font-weight: 700;
+  color: #666;
+  text-indent: 20px;
+}
+.bodybox .top .content .load_c .load_btn {
+  margin-top: 20px;
+  width: 255px;
+  height: 42px;
+  text-align: center;
+  background: #fb3791;
+  line-height: 42px;
+}
+.bodybox .top .content .load_c .load_btn a {
+  width: 258px;
+  height: 42px;
+  color: white;
+  font-size: 20px;
+}
+.bodybox .top .loadfooter {
+  color: #666;
+  width: 255px;
+  padding-top: 10px;
+  line-height: 20px;
+  height: 20px;
+  background: pink;
+}
+.bodybox .bottom {
+  padding-top: 20px;
+  text-align: center;
+  padding: 30px;
+  line-height: 22px;
+  color: #ccc;
+  font-size: 12px;
+  font-family: Verdana,Geneva,sans-serif;
+}
+
+/*# sourceMappingURL=load.css.map */
