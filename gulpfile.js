@@ -76,16 +76,16 @@ gulp.task("sassfile",function () {
 //         .pipe(gulp.dest("D:\\phpStudy\\WWW\\gulpmiaTest\\dist\\js"));
 // });
 
-
-//合并并压缩并重命名 此函数有问题
+//合并并压缩并重命名
 // gulp.task("concatanguglifyandrenamejs",function () {
-//     gulp.src(["js/index.js","js/goodlist.js"])
-//         .pipe(concat("concat.js"))
-//         .pipe(gulp.dest("D:\\phpStudy\\WWW\\gulpmiaTest\\dist\\js"))
+//     gulp.src(["js/2.js","js/3.js"])
+//         .pipe(concat("4.js"))
+//         .pipe(gulp.dest("D:\\phpStudy\\gulpmiaTest\\dist\\js"))
 //         .pipe(uglify())
 //         .pipe(rename("concat.min.js"))
-//         .pipe(gulp.dest("D:\\phpStudy\\WWW\\gulpmiaTest\\dist\\js"));
+//         .pipe(gulp.dest("D:\\phpStudy\\gulpmiaTest\\dist\\js"));
 // });
+
 
 //监听 gulp.watch  总函数有问题 要单独调用
 gulp.task("watchall",function () {
