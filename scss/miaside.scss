@@ -1,16 +1,12 @@
 @import '_common';
 .htmleaf-container{
     width:230px;
-    width:100%;
     height:630px;
     .product_sort{
         margin:20px;
         width:226px;
-        height:644px;
-        background:#fff 
-        url(../images/img_226x95.jpg) 
-        no-repeat left
-         bottom;
+        height:706px;
+        background:#fff;
          position:relative; 
          z-index:90;     
         .hd{
@@ -34,26 +30,31 @@
                     width:78px;
                     height:17px;
                 }
+                .subitem{
+                    .inner{
+                        
+                    }
+                }
             }
         }
         .bd{
             padding-bottom:10px;
-            .item{
-               
-                height:60px;
+            .item{              
+                height:82px;
                 position:relative;
                 .title{
                     width:226px;
-                    text-indent:43px;
+                    text-indent:17px;
                     height:30px;
+                    line-height:30px;
                     overflow:hidden;
-                    line-height:42px;
                     font-size:14px;
                     font-weight:bold;
                     color:#292929;
                     a{
                         color: #fb60a7;
                         position:relative;
+                        padding-left:5px;
                         i{
                             width:19px;
                             height:19px;
@@ -64,16 +65,19 @@
                     }
                 }
                 .list{
-                    width:210px;
-                    padding-left:15px;
+                    width:200px;
+                    padding-left:5px;
+                    margin-left:15px;
                     height:50px;
                     line-height:20px;
                     overflow:hidden;
-                    border-bottom:dashed  1px gray;
+                    background: url(../img/sideDot.jpg) repeat-x 5px 49px ;
                     a{
                         font-family:"Microsoft YaHei",Arial,sans-serif;
                         color: #666;
-                        font-size:12px;                       
+                        font-size:12px;  
+                        display: inline-block;
+                        vertical-align: middle;                     
                         &:hover{
                             color: #fb60a7;
                         }
@@ -85,17 +89,27 @@
                     color:#c0d7f9;
                     position:absolute;
                     right:10px;
-                    top:14px;
+                    top:27px;
                 }
                 .line{
                     position:absolute;
                     right:-2px;
                     top:0px;
-                    width:2px;
-                    height:50px;
+                    width:4px;
+                    height:80px;
                     background-color:black;
                     z-index:95;
-                    // display:none;
+                    display:none;
+                }
+                .lineleft{
+                    position:absolute;
+                    left:0px;
+                    top:-1px;
+                    width:4px;
+                    height:81px;
+                    background-color:#fb60a7;
+                    z-index:95;
+                    display:none;
                 }
             }
         }
