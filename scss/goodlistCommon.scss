@@ -530,6 +530,12 @@ $width2:1100px;
     }
     
 }
+
+
+
+
+
+
 /*last part footer*/
 .footer{
     width:100%;
@@ -814,8 +820,7 @@ $width2:1100px;
         height:620px;
         position:relative; 
         z-index:90;
-        box-sizing:border-box;  
-        left:5px;   
+        box-sizing:border-box;     
         .hd{
             width:226px;
             height:52px;
@@ -1068,77 +1073,3 @@ $width2:1100px;
     } 
 }
 //this is sidecloum end
-
-
-// this is realy goodlist content
-.wrap{
-    width:100%;
-    font-size: 12px;
-    margin-bottom: 20px;
-    .content{
-        width:1263px;
-        margin:0 auto;
-        background: #f2f2f2;
-        .width1000{
-            width:$width2;
-            margin:0 auto;
-            .crumbs{
-                margin: 20px 0 7px 0;
-            }
-            .screening{
-                .selector{
-                    padding: 0 14px;
-                    background: #fff;
-                    color: #666;
-                    overflow:hidden;
-                    line-height: 24px;
-                    padding: 8px 0;
-                    position: relative;
-                    border-bottom: 1px dashed #ececec;
-                    .key{
-                        text-overflow: ellipsis;
-                        white-space: nowrap;
-                        overflow: hidden;
-                        float: left;
-                        width: 73px;
-                        padding-right: 14px;
-                        text-align: right;
-                        color: #999;
-                        line-height: 24px;
-                    }
-                    .contenter{
-                        float: right;
-                        width: 918px;
-                        height: 24px;
-                        line-height: 24px;
-                        padding-right: 60px;
-                        overflow: hidden;
-                        color: #666;
-                        .smore {
-                            position: absolute;
-                            width: 50px;
-                            height: 24px;
-                            line-height: 24px;
-                            right:10px;
-                            cursor: pointer;
-                        }
-                        .kcon{
-                            overflow:hidden;
-                            a{
-                                width: 125px;
-                                white-space: nowrap;
-                                overflow: hidden;
-                                text-overflow: ellipsis;
-                                float: left;
-                                margin-right: 5px;
-                                padding: 0 20px 0 10px;
-                                color: #222;
-                            }
-                        } 
-                    }
-                }            
-            }
-        }
-    }
-}
-
