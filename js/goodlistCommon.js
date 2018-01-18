@@ -40,7 +40,7 @@
     sideAllGood.bind('mouseleave',function(){
 
             sideDispear.css('display','none');
-            sideFather.css('background-color','none');  
+            sideFather.css('background','none');  
             // sideFather.css({overflow:"hidden",height:"50px"});
        
     })
@@ -57,7 +57,7 @@
 
 
 
-   //张悦 侧边栏代码
+   //张悦 代码侧边栏选项卡
     // oChooseDl.on('mouseenter', function () {
     //     clearTimeout(iTimer);
     //     let iIndex = oChooseDl.index($(this));

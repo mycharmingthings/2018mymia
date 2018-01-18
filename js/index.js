@@ -1,5 +1,3 @@
-
-
 (function($){
     $.noConflict();
     // //模态窗口 jQuery有问题，底下用原声做出来了
@@ -29,6 +27,7 @@
             $('.emempoty').css('display','block');
     })
 
+    
     //正品保证clearInterval(iTimer);
     $('.promise').bind('mouseenter',function(){             
             $('.choice').css('display','block');           
@@ -49,79 +48,154 @@
     //     $('.header .header-nav .nav .menus .gooddds').css('display', 'none');       
     // })
 
-
-    //按照小米方式做选项卡
-
-        let 
-        oMenuHover = $('.header .header-nav .nav .menus .dlsone .dl'),
-        oGoods     = $('.header .header-nav .nav .menus .gooddds'),
-        aGoodsdd   = $('.gooddds .dd');
-      
-        let iTimer = null;
-        oMenuHover.on('mouseenter',function(){
-            // clearTimeout(iTimer);
-            oGoods.css('display', 'block');
-            let iIndex = oMenuHover.index($(this));
-            aGoodsdd.css('display', 'none').eq(iIndex).css('display', 'block');
+    $(function(){
+        $(".product_sort .bd .item").hover(function(){
+            console.log(1);
+            $(this).addClass("layer");
+        },function(){
+            $(this).removeClass("layer");
         });
-        oMenuHover.on('mouseleave',function(){
-            iTimer = setTimeout(function(){
-                 oGoods.animate({ height: 0 }, 120, function () {
-                                 $(this).css('display', 'none');
-                    });                    
-                //  oGoods.style.position ='15 0';
-           },4000)
-        });
-        // oGoods.hover(function () {
-        //        clearTimeout(iTimer);
-        //      }, function () {
-        //                oGoods.stop(true).animate({ height: 0 }, 120, function () {
-        //                $(this).css('display', 'none');
-        //          });
-        //  });
+    })
+
 
 
 
 
     //轮播图
-    function lunbotu(){  
-        $(".picBox").animate({margintop:"-600px" },4000,"linear",function(){  
-            $(this).css({margintop:"0px"});  
-            $(this).children("li").first().remove().clone(true).appendTo(".picBox");  
-        });  
-    }  
-    var startRollOne=setInterval(lunbotu,3000);  
-    $(".carousel").hover(function () {  
-        clearInterval(startRollOne);  
-    }, function () {  
-        startRollOne=setInterval(lunbotu,3000);  
-    });
+    var arr=["mai_nav_4.jpg","mai_nav_4.jpg","mai_nav_4.jpg","mai_nav_4.jpg"];
+    var ord = 0;//代表当前图片的序号，从0开始。
+    var myTimer = null;
+
+    function  initUI() {
+        $("#box li:first").css({"backgroundColor":"#f92c86"});
+        }
+
+        function  initEvent() {
+        $("#box").mouseenter(function () {
+            stopPlay();
+        });
+
+        $("#box").mouseleave(function () {
+            autoPlay();
+        });
+
+        $("#box li").click(function () {
+            goImg($("#box li").index(this));
+        });
+
+        $("#leftArrow").click(function () {
+            let transord =ord-1;
+            transord = transord<0?arr.length-1:transord;
+            goImg(transord);
+        });
+
+        $("#rightArrow").click(function () {
+            let transord =ord+1;
+            transord = transord>arr.length-1?0:transord;
+            goImg(transord);
+        });
+    }
+function autoPlay() {
+    myTimer = setInterval(function () {
+        //一、改变数据
+        // 1、记录当前序号（淡出的图片序号）
+        let outOrd = ord;
+        //2、改变要显示的图片的序号（淡出图片序号加一）
+        ord++;
+        if(ord>arr.length-1){
+            ord=0;
+        }
+        //二、改变外观
+        let $img = $("#box img");
+        //1、淡入淡出效果
+        //让一张(outOrd)淡出 当前消失
+        $img.eq(outOrd).animate({"opacity":0},800);
+        //让一张(ord)淡入下一张图片显示
+        $img.eq(ord).animate({"opacity":1},800);
+        //2、改变豆豆的颜色；
+        $("#box li").eq(ord).css({"backgroundColor":"#f92c86"}).siblings().css({"backgroundColor":"white"});
+    },3000);
+}
 
 
-    //侧边栏
+//2、停止播放
+function stopPlay() {
+    window.clearInterval(myTimer);
+}
 
-var navOffset=$(".header-nav").offset().top;
-$(window).scroll(function(){  
-    scrollPos=$(window).scrollTop(); 
-    // console.log(navOffset); 
-    if(scrollPos >=navOffset){  
-        $('.sidebar').css('display', 'block'); 
-    }else{  
-        $('.sidebar').css('display', 'none');  
-    }  
+//3、跳转到指定的图片
+function  goImg(transOrd) {
+    //一、改变数据
+    // 1、记录当前序号（淡出的图片序号）
+    let outOrd = ord;
+    //2、改变要显示的图片的序号（传入的图片序号）
+    ord=transOrd;
+    if(ord>arr.length-1){
+        ord=0;
+    }
+    //二、改变外观
+    let $img = $("#box img");
+    //1、淡入淡出效果
+    //让一张(outOrd)淡出 当前消失
+    $img.eq(outOrd).animate({"opacity":0},800);
+    //让一张(ord)淡入下一张图片显示
+    $img.eq(ord).animate({"opacity":1},800);
+    //2、改变豆豆的颜色；
+    $("#box li").eq(ord).css({"backgroundColor":"#f92c86"}).siblings().css({"backgroundColor":"white"});
+}
+
+$(function () {
+    //1、初始化界面
+    initUI();
+    //2、绑定事件
+    initEvent();
+    //3、自动播放
+    autoPlay();
 });
 
-//...................................判断吸顶效果........................
-// var navOffset=$(".selection-five").offset().top; 
-// $(window).scroll(function(){  
-//     scrollPos=$(window).scrollTop(); 
-//     // console.log(navOffset); 
-//     if(scrollPos >=navOffset){  
-//         oSelefive.addClass('fixed'); 
-//     }else{  
-//         oSelefive.removeClass('fixed'); 
-//     }  
-// });
+
+
+
+
+    // function lunbotu(){  
+    //     $(".picBox").animate({margintop:"-600px" },4000,"linear",function(){  
+    //         $(this).css({margintop:"0px"});  
+    //         $(this).children("li").first().remove().clone(true).appendTo(".picBox");  
+    //     });  
+    // }  
+    // var startRollOne=setInterval(lunbotu,3000);  
+    // $(".carousel").hover(function () {  
+    //     clearInterval(startRollOne);  
+    // }, function () {  
+    //     startRollOne=setInterval(lunbotu,3000);  
+    // });
+
+
+   
+   
+    //侧边栏
+    var navOffset=$(".header-nav").offset().top;
+    $(window).scroll(function(){  
+        scrollPos=$(window).scrollTop(); 
+        // console.log(navOffset); 
+        if(scrollPos >=navOffset){  
+            $('.sidebar').css('display', 'block'); 
+        }else{  
+            $('.sidebar').css('display', 'none');  
+        }  
+    });
+
+    //...................................判断吸顶效果........................
+    // var navOffset=$(".selection-five").offset().top; 
+    // $(window).scroll(function(){  
+    //     scrollPos=$(window).scrollTop(); 
+    //     // console.log(navOffset); 
+    //     if(scrollPos >=navOffset){  
+    //         oSelefive.addClass('fixed'); 
+    //     }else{  
+    //         oSelefive.removeClass('fixed'); 
+    //     }  
+    // });
 
 
     // 百度源

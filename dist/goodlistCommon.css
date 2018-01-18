@@ -1,0 +1,85 @@
+body, div, p, h1, h2, h3, h4, h5, h6, hr, ul, ol, li, dd, dt, dl, table, tr, td, fieldset, caption, form, input, img, legend {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #eee; }
+
+a {
+  text-decoration: none; }
+
+ul, li {
+  list-style: none; }
+
+img {
+  border: none;
+  vertical-align: bottom; }
+
+.header .header-nav .nav .menus .dlsone {
+  display: none; }
+
+.gdlist_wrap {
+  width: 100%;
+  height: auto;
+  margin: 20px 0; }
+  .gdlist_wrap .content {
+    width: 1263px;
+    height: auto;
+    margin: 0 auto; }
+    .gdlist_wrap .content .w1100 {
+      width: 1100px;
+      margin: 0 auto;
+      background: pink;
+      height: 50px; }
+      .gdlist_wrap .content .w1100 .screening {
+        width: 100%;
+        height: auto;
+        padding: 0 14px;
+        background: #fff;
+        color: #666;
+        box-sizing: border-box;
+        font-size: 12px; }
+        .gdlist_wrap .content .w1100 .screening .clearfix {
+          line-height: 24px;
+          overflow: hidden;
+          padding: 8px 0;
+          position: relative;
+          border-bottom: 1px dashed #ececec; }
+          .gdlist_wrap .content .w1100 .screening .clearfix .l {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            float: left;
+            width: 73px;
+            padding-right: 14px;
+            text-align: right;
+            white-space: nowrap; }
+          .gdlist_wrap .content .w1100 .screening .clearfix .r {
+            float: left;
+            width: 918px;
+            height: 24px;
+            line-height: 24px;
+            padding-right: 60px;
+            overflow: hidden;
+            background: pink; }
+            .gdlist_wrap .content .w1100 .screening .clearfix .r .contenter {
+              overflow: hidden; }
+              .gdlist_wrap .content .w1100 .screening .clearfix .r .contenter a {
+                width: 125px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis; }
+            .gdlist_wrap .content .w1100 .screening .clearfix .r .more {
+              position: absolute;
+              width: 50px;
+              height: 24px;
+              line-height: 24px;
+              right: 0;
+              cursor: pointer; }
+              .gdlist_wrap .content .w1100 .screening .clearfix .r .more i {
+                position: absolute;
+                width: 11px;
+                height: 6px;
+                background-position: 0 -87px;
+                top: 9px;
+                left: 2.5em; }
