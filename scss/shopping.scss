@@ -530,6 +530,7 @@ $width2:1100px;
     }
     
 }
+
 /*last part footer*/
 .footer{
     width:100%;
@@ -814,8 +815,7 @@ $width2:1100px;
         height:620px;
         position:relative; 
         z-index:90;
-        box-sizing:border-box;  
-        left:5px;   
+        box-sizing:border-box;     
         .hd{
             width:226px;
             height:52px;
@@ -1069,497 +1069,121 @@ $width2:1100px;
 }
 //this is sidecloum end
 
-
-// this is realy goodlist content
+/*this is shopping cart starting**/
 .wrap{
     width:100%;
     font-size: 12px;
     margin-bottom: 20px;
-    .content{
-        width:1263px;
-        margin:0 auto;
-        background: #f2f2f2;
-        .width1000{
+    .breadCrumbs{
+        height: 50px;
+        line-height: 50px;
+        .w1004{
             width:$width2;
-            margin:0 auto;
-            .crumbs{
-                margin: 20px 0 7px 0;
+            font-family: \5B8B\4F53;
+            margin: 0 auto;
+            a{
+                color: #666;
+                cursor: pointer;
+                &:hover{
+                    color:#ff3893;
+                }
             }
-            .screening{
-                .selector{
-                    padding: 0 14px;
-                    background: #fff;
-                    color: #666;
-                    overflow:hidden;
-                    line-height: 24px;
-                    padding: 8px 0;
-                    position: relative;
-                    border-bottom: 1px dashed #ececec;
-                    .key{
-                        text-overflow: ellipsis;
-                        white-space: nowrap;
-                        overflow: hidden;
-                        float: left;
-                        width: 73px;
-                        padding-right: 14px;
-                        text-align: right;
-                        color: #999;
-                        line-height: 24px;
-                    }
-                    .contenter{
-                        float: right;
-                        width: 918px;
-                        height: 24px;
-                        line-height: 24px;
-                        padding-right: 60px;
-                        overflow: hidden;
-                        color: #666;
-                        .smore {
-                            position: absolute;
-                            width: 50px;
-                            height: 24px;
-                            line-height: 24px;
-                            right:10px;
-                            cursor: pointer;
-                            &:hover{
-                                color:#ff3893;  
-                            }
-                        }
-                        .kcon{
-                            overflow:hidden;
-                            a{
-                                width: 125px;
-                                white-space: nowrap;
-                                overflow: hidden;
-                                text-overflow: ellipsis;
-                                float: left;
-                                margin-right: 5px;
-                                padding: 0 20px 0 10px;
-                                color: #222;
-                                &:hover{
-                                    color:#ff3893;  
-                                }
-                            }
-                        } 
-                    }
-                }            
+        }
+    }
+    // content detail
+    .content{
+        .w1004{
+            width:$width2;
+            margin: 0 auto;
+            // show
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
             }
-            .reputation{
-                zoom: 1;
-                overflow:hidden;
-                .content{
-                    overflow:hidden;
-                    .maoDian{
-                        height: 0;
-                        line-height: 0;
+            .show{
+                padding: 20px;
+                background:white;
+                .left{
+                    width: 402px;
+                    height:404px;
+                    border:1px solid #eee;
+                    .mark_wrap_x60{
+                        width: 60%;
+                        height: 60px;
+                        position: absolute;
+                        left: 5px;
+                        top: 5px;
+                        z-index: 500;
                         font-size: 0;
-                        overflow: hidden;
-                    }
-                    .right{
-                        width: 1100px;
-                        float:left;
-                        .opic{
-                            display:none;
+                        .mark_itemY{
+                           width:100px;
+                           height:50px;
+                           display: inline-block;
+                           background:url(../img/goodlistYear.png) no-repeat;
                         }
-                        .bmtitle{
-                            height: 44px;
-                            border: 1px solid #ededed;
-                            padding: 0 19px 0 0;
-                            line-height: 33px;
+                    }
+                    .mark_wrap_x60:after{
+                        content:"";
+                        height:0;
+                        overflow:hidden;
+                        clear:both;
+                        display:block;
+                        visibility:hidden;
+                    }
+                    .mark_custom_160{
+                        width: 160px;
+                        height: 80px;
+                        position: absolute;
+                        right: 2px;
+                        top: 2px;
+                        z-index: 9;
+                        background:url(../img/goodlistYear.png) no-repeat -42px 0;
+                    }
+                }
+                .rel{
+                    position: relative;
+                }
+                .l{
+                    float: left;
+                }
+                .right{
+                    width: 600px;
+                    padding-left: 50px;
+                    .M_productInfo{
+                        .country{
                             font-size: 14px;
-                            margin-bottom: 10px;
-                            background:white;
-                            .r{
-                                line-height: 44px;
-                                float: right;
-                                display: inline;
-                                font-size: 14px; 
-                                .pink{
-                                    font-style:normal;
-                                    color:#ff3893;  
-                                }      
-                            }
+                            font-family: \5FAE\8F6F\96C5\9ED1;
+                            color: #666;
                             .l{
-                                float: left;
                                 display: inline;
-                                line-height: 33px;
-                                span{
-                                    border: none;
-                                    border-right: 1px solid #ededed;
-                                    background: #fff;
-                                    margin-right: 0;
-                                    line-height: 33px;
-                                    float: left;
-                                    display:inline-block;
-                                    cursor: pointer;
-                                    .inputs-price{
-                                        padding: 0 10px;
-                                        .inner{
-                                            display:inline-block; 
-                                            .input-items{
-                                                list-style-type: disc;
-                                                -webkit-margin-start: 0px;
-                                                -webkit-margin-end: 0px;
-                                                -webkit-margin-before: 0em;
-                                                -webkit-margin-after: 0em;
-                                                overflow:hidden;
-                                                .one{
-                                                    height:5px;
-                                                    background:white;
-                                                }
-                                                .input-item{
-                                                    float: left;
-                                                    width:54px;
-                                                    box-sizing: border-box;
-                                                    .min{
-                                                        -webkit-appearance: textfield;
-                                                        background-color: white;
-                                                        -webkit-rtl-ordering: logical;
-                                                        cursor: text;
-                                                        text-rendering: auto;
-                                                        color: initial;
-                                                        letter-spacing: normal;
-                                                        word-spacing: normal;
-                                                        text-transform: none;
-                                                        text-indent: 0px;
-                                                        text-shadow: none;
-                                                        display: inline-block;
-                                                        text-align: start;
-                                                        -webkit-writing-mode: horizontal-tb;
-                                                        width:40px;
-                                                        outline:none;
-                                                    }
-                                                    .max{
-                                                        -webkit-appearance: textfield;
-                                                        background-color: white;
-                                                        -webkit-rtl-ordering: logical;
-                                                        cursor: text;
-                                                        text-rendering: auto;
-                                                        color: initial;
-                                                        letter-spacing: normal;
-                                                        word-spacing: normal;
-                                                        text-transform: none;
-                                                        text-indent: 0px;
-                                                        text-shadow: none;
-                                                        display: inline-block;
-                                                        text-align: start;
-                                                        -webkit-writing-mode: horizontal-tb;
-                                                        width:40px;
-                                                        outline:none;
-                                                    }
-                                                    
-                                                }
-                                                .sep{
-                                                    float: left;
-                                                    margin-right: 5px;
-                                                    display: list-item;
-                                                }
-                                                .input-submit{
-                                                    float: left;
-                                                    margin-right: 5px;
-                                                    button{
-                                                        cursor: pointer;
-                                                        background-color: #F84D9C;
-                                                        color: #fff;
-                                                        height: 23px;
-                                                        width: 50px;
-                                                        border-radius: 2px;
-                                                        -webkit-border-radius: 2px;
-                                                        border: none;
-                                                        margin-left: 5px;
-                                                        line-height: 20px;
-                                                        align-items: flex-start;
-                                                        text-align: center;
-                                                        padding:1px 6px;
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                    em{
-                                        padding: 5px 25px 7px 25px;
-                                        display: block;
-                                        font-style: normal;
-                                        color: #666;
-                                       
-                                        width:100%;
-                                        height:100%;
-                                        &:hover{
-                                            color:#ff3893;   
-                                        }
-                                    }
-                                }
-                                .current{
-                                    em{
-                                        color: #ff3893;
-                                    } 
-                                }
-                                label{
-                                    border:none;
-                                    height:44px;
-                                    background: #fff;
-                                    margin-right: 0;
-                                    float: left;
-                                    em{
-                                        padding: 5px 25px 7px 25px;
-                                        font-style: normal;
-                                        display:block;
-                                       .showSoldOut{
-                                        vertical-align: middle;
-                                        margin-right: 8px;
-                                        font-size: 12px;
-                                        font-family: inherit;
-                                        line-height: normal;
-                                        outline: 0;
-                                        background-color: initial;
-                                        -webkit-rtl-ordering: logical;
-                                        text-rendering: auto;
-                                        color: initial;
-                                        letter-spacing: normal;
-                                        word-spacing: normal;
-                                        text-transform: none;
-                                        text-indent: 0px;
-                                        text-shadow: none;
-                                        display: inline-block;
-                                        text-align: start;
-                                       } 
-                                    }
+                                .logo_cun{
+                                    width: 22px;
+                                    vertical-align: middle;
+                                    margin-right: 5px;
                                 }
                             }
                         }
-                        .Lcon{
-                            position: relative;
-                            // min-height: 762px;
-                            zoom: 1;
-                            .lione{
-                                width:1100px;
-                                height: 390px;
-                            }
-                            .block{
-                                width: 258px;
-                                height: 355px;
-                                padding: 0;
-                                border: none;
-                                overflow: hidden;
-                                margin: 0 10px 15px 10px;
-                                position: relative;
-                                float: left;
-                                display: inline;
-                                background: white;
-                                border:1px solid transparent;
-                                &:hover{
-                                    border:1px solid red;
-                                    height: 370px;
-                                }
-                                &:hover .blockhover{
-                                    overflow: static;
-                                    height:35px;
-                                }
-
-                                .mark_wrap_x46{
-                                    position: absolute;
-                                    width: 100%;
-                                    height: 46px;
-                                    right: 2px;
-                                    top: 2px;
-                                    z-index: 9;
-                                    .mark_item{
-                                        position: absolute;
-                                        margin-right: 2px;
-                                        display: inline-block;
-                                        width: 46px;
-                                        height: 46px;
-                                        top:0;
-                                        left:0;
-                                        background: url(../img/goodlistGlobal.jpg) no-repeat;
-                                    }
-                                }
-                                .mark_custom_120{
-                                    position: absolute;
-                                    width: 120px;
-                                    height: 60px;                                   
-                                    right: 2px;
-                                    top: 2px;
-                                    z-index: 9;
-                                    img{
-                                        width:100%;
-                                    }
-                                }
-                                .icoAr{
-                                    position: absolute;
-                                    top: 0;
-                                    left: 0;
-
-                                }
-                                .listsoldout{
-                                    display:none;
-                                    top: 90px;
-                                    left: 85px;
-                                    margin: 0;
-                                    width: 90px;
-                                    height: 90px;
-                                    position: absolute;
-                                    overflow: hidden;
-                                    z-index: 20;
-                                    border-radius: 50%;
-                                    background-color: rgba(0,0,0,0.2);
-                                }
-                                .listsoldspan{
-                                    display:none;
-                                    top: 123px;
-                                    left: 112px;
-                                    width: 90px;
-                                    height: 90px;
-                                    position: absolute;
-                                    color:white;
-                                    z-index: 20;
-                                    border-radius: 50%;
-                                }
-                                a{
-                                    position: relative;
-                                    top:10px;
-                                }
-                                .bmfo{
-                                    height: auto;
-                                    padding: 6px 10px 0 10px;
-                                    background: #fff;
-                                    .saled{
-                                        overflow: hidden;
-                                        font-family: '\5FAE\8F6F\96C5\9ED1',Arial;
-                                        width: 240px;
-                                        height: 24px;
-                                        color: #f450a2;
-                                        text-align: right;
-                                        line-height: 30px;
-                                        .r{
-                                            margin: 3px 0 0 0;
-                                            color: #888;
-                                        }
-                                        .pricediv{
-                                            position:relative;
-                                            line-height: 26px;
-                                            .pink{
-                                                color: #f450a2;
-                                                font-size: 14px;
-                                                font-style: normal;
-                                                float: left;
-                                            }
-                                            .Tahoma{
-                                                font-size: 20px;
-                                                font-weight: 700;
-                                                color: #f450a2;
-                                                font-family: Tahoma,Geneva,sans-serif;
-                                            }
-                                            .originalPrice{
-                                                margin: 3px 0 0 0;
-                                                color: #888;
-                                                text-decoration: line-through;
-                                                display: inline;
-                                            }
-                                            .suit_tz_price{
-                                                display: inline;
-                                                border: 1px dotted #fa4b9b;
-                                                height: 18px;
-                                                line-height: 18px;
-                                                padding: 0 5px;
-                                                margin-left: 5px;
-                                                margin-top: 4px;
-                                                position:absolute;
-                                                left:54px;
-                                                top:0px;
-                                            }
-                                        }
-                                    }
-                                    p{
-                                        position: relative;
-                                        cursor: pointer;
-                                        height: 22px;
-                                        overflow: hidden;
-                                        .pink{
-                                            display:inline-block;
-                                            font-weight: 700;
-                                            color: #f450a2;
-                                            padding-top:7px;
-                                        }
-                                            em{
-                                                display:inline-block;
-                                                font-style:normal;
-                                            }
-                                        a{ 
-                                            position: absolute;
-                                            text-decoration: none;
-                                            color: #666;
-                                            top:7px;
-                                        }
-                                    }
-                                    .tahoma_active{
-                                        font-size: 12px;
-                                        color: #fa4b9b;
-                                        line-height: 1.5;
-                                        overflow: hidden;
-                                        white-space: nowrap;
-                                        text-overflow: ellipsis;
-                                        margin-top: 5px;
-                                        span{
-                                            color: #fff;
-                                            background: #fa4b9b;
-                                            padding: 0 2px 2px 2px;
-                                            margin-right: 7px;
-                                        }
-                                    }
-
-                                }
-                                .ref{
-                                    position: relative;
-                                }
-                            }
-                            .lineblockone{
-                                margin-left:0px;
-                            }
-                            .lineblocklast{
-                               margin-right:0px;
-                            }
-                        }
-                        .Lpage{
-                            text-align: center;
-                            padding-bottom: 18px;
-                            clear: both;
-                            p{
-                               line-height: 18px;
-                               display: block;
-                               -webkit-margin-before: 1em;
-                               -webkit-margin-after: 1em;
-                               -webkit-margin-start: 0px;
-                               -webkit-margin-end: 0px;
-                               strong{
-                                    font-weight: bold;
-                                    text-align: center;
-                               }
-                               a{
-                                height: 30px;
-                                line-height: 30px;
-                                text-align: center;
-                                color: #818181;
-                                border: 1px solid #e6e6e6;
-                                background-color: #fff;
-                                padding-left: 15px;
-                                padding-right: 15px;
-                                padding-top:5px;
-                                padding-bottom:5px;
-                                &:a{
-                                    background-color: #f450a2;
-                                    border: 1px solid #f450a2;
-                                    color: #fff;
-                                    display: inline-block;
-                                    margin-left: 4px;
-                                    font-size: 14px;
-                                }
-                               }
-                            }
+                        .mb10{
+                            margin-bottom: 10px;
                         }
                     }
-                }               
+                }
+                .l{
+                    float:left;
+                    display:inline;
+                }
+            }
+            .clearfix {
+                zoom: 1;
+            }
+            // introduction
+            .introduction{
+
             }
         }
     }
 }
+/*this is shopping cart ending**/
