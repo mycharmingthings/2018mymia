@@ -1116,7 +1116,7 @@ $width2:1100px;
                         position: absolute;
                         left: 5px;
                         top: 5px;
-                        z-index: 500;
+                        z-index: 2;
                         font-size: 0;
                         .mark_itemY{
                            width:100px;
@@ -1153,35 +1153,509 @@ $width2:1100px;
                     width: 600px;
                     padding-left: 50px;
                     .M_productInfo{
+                        //1
                         .country{
                             font-size: 14px;
                             font-family: \5FAE\8F6F\96C5\9ED1;
                             color: #666;
                             .l{
                                 display: inline;
+                                span{
+                                    color: #999;
+                                }
+                                i{
+                                    font-style: normal;
+                                    color: #999;
+                                }
                                 .logo_cun{
                                     width: 22px;
                                     vertical-align: middle;
-                                    margin-right: 5px;
+                                    margin-right: 5px;                                  
                                 }
                             }
                         }
                         .mb10{
                             margin-bottom: 10px;
+                            width:550px;
+                        }
+                        //2
+                        .brand{
+                            font-size: 18px !important;
+                            color: #222 !important;
+                            padding-right: 40px;
+                            .baoyou{
+                                color: #ff3b93;
+                            }
+                            a{
+                                &:hover{
+                                    color: #ff3b93;
+                                }
+                            }
+                        }
+                        //3
+                        .titlecon{
+                            padding: 0;
+                            border-bottom: none;
+                            background: #fff;
+                            .left{
+                                width:550px;
+                                height: 40px;
+                                border:none;
+                            }
+                        }
+                        .fz14{
+                            font-size: 14px;
+                            font-family: \5FAE\8F6F\96C5\9ED1;
+                            color: #666;
+                        }
+                        //4
+                        .pi_price_box{
+                            background: #fff9fd;
+                            padding: 10px 15px;
+                            position: relative;
+                            .tit_txt {
+                                font-size: 16px;
+                                color: #666;
+                                margin-right: 30px;
+                            }
+                            .pbox_price {
+                                display: inline-block;
+                                font-size: 22px;
+                                color: #f43499;
+                                .pbox_yen {
+                                    font-size: 20px;
+                                    font-style: normal;
+                                }
+                                em{
+                                    font-style: normal;
+                                }
+                            }
+                            .pbox_market{
+                                padding: 0 20px 0 10px;
+                                color: gray;
+                                del{
+                                    text-decoration: line-through;
+                                }
+                            }
+                            .jks{
+                                color: #999;
+                                cursor: pointer;
+                                width: 100px;
+                                background: url(../img/why.png) no-repeat 43px center;
+                                display: inline-block;
+                                text-align: right;
+                                .layer_shui, .return-goods span, .jiap span {
+                                    padding: 10px 20px;
+                                    position: absolute;
+                                    top: 60px;
+                                    left: 357px;
+                                    background: #fff;
+                                    border: 1px solid #ccc;
+                                    visibility: hidden;
+                                    text-align: left;
+                                    line-height: 20px;
+                                    z-index: 10;
+                                }
+                            }
+                        }
+                        //5
+                        .pi_attr_box{
+                            min-height: auto;
+                            dt{
+                                float: left;
+                                font-size: 12px;
+                                width: 46px;
+                                text-align: left;
+                                color: gray;
+                                line-height: 25px;
+                            }
+                            dd{
+                                -webkit-margin-start: 40px;
+                            }
+                            .clearfix:after {
+                                content: ".";
+                                display: block;
+                                height: 0;
+                                clear: both;
+                                visibility: hidden;
+                            }
+                            .color{
+                                overflow: hidden;
+                                padding-top: 12px;
+                                vertical-align: middle;
+                                .tit_txt {
+                                    font-size: 16px;
+                                    width: auto;
+                                    padding-left: 15px;
+                                    text-align: left;
+                                    color: gray;
+                                    line-height: 25px;
+                                    float: left;
+                                }
+                                .color_list {
+                                    float: left;
+                                    width: 340px;
+                                    -webkit-margin-start: 40px;
+                                    .color_list_item{
+                                        float: left;
+                                        width: 38px;
+                                        height: 47px;
+                                        position: relative;
+                                        margin: 0 15px 9px 0;
+                                        a {
+                                            display: inline-block;
+                                            width: 43px;
+                                            height: 43px;
+                                            padding: 1px;
+                                            border: 1px solid #b5b5b5;
+                                            .i_select {
+                                                position: absolute;
+                                                bottom: 0;
+                                                right: -7px;
+                                                width: 17px;
+                                                height: 16px;
+                                                background-position: -50px -100px;
+                                                background-image: url(../img/detail_imgs_png8.png);
+                                                background-repeat: no-repeat;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .i_num {
+                                padding: 16px 1px;
+                                position: relative;
+                                height: 30px;
+                                margin: -1px 0;
+                                .tit_txt {
+                                    font-size: 16px;
+                                    width: auto;
+                                    padding-left: 15px;
+                                }
+                                .i_notice_msg{
+                                    display:none;
+                                    position: absolute;
+                                    height: 26px;
+                                    line-height: 26px;
+                                    bottom: -26px;
+                                    right: 0;
+                                    padding-left: 20px;
+                                    color: #f43499;
+                                    background: url(../img/detail_imgs_png8.png) no-repeat -500px -250px;
+                                }
+                                .num_box {
+                                    float: left;
+                                    position: relative;
+                                    height: 28px;
+                                    border: 1px solid #b3b3b3;
+                                    .num_reduce_disabled {
+                                        background-position: 0 -150px;
+                                        cursor: default;
+                                        float: left;
+                                        width: 24px;
+                                        height: 28px;
+                                        background-image: url(../img/detail_imgs_png8.png);
+                                        background-repeat: no-repeat;
+                                    }
+                                    .num_input {
+                                        text-align: center;
+                                        line-height: 28px;
+                                        width: 28px;
+                                        background-color: #fff;
+                                        font-style: normal;
+                                        float: left;
+                                        height: 28px;
+                                    }
+                                    .num_add {
+                                        background-position: -50px -150px;
+                                        cursor: pointer;
+                                        float: left;
+                                        width: 24px;
+                                        height: 28px;
+                                        background-image: url(../img/detail_imgs_png8.png);
+                                        background-repeat: no-repeat;
+                                    }
+                                }
+                                .num_msg{
+                                    display:none;
+                                    float: left;
+                                    height: 28px;
+                                    width:100px;
+                                    line-height: 28px;
+                                    padding-left: 10px;
+                                    font-size: 12px;
+                                    color: #858585;
+                                }
+                            }
+                            .clearfix{
+                                zoom: 1;
+                            }
+                            .clearfix{
+                                zoom: 1;
+                                .review_f {
+                                    float: left;
+                                    display: block;
+                                    height: 40px;
+                                    margin-right: 15px;
+                                    span{
+                                        line-height: 26px; 
+                                        color:#666;
+                                    }
+                                    i{
+                                        color: #ff3b93;
+                                        font-style: normal;
+                                    }
+                                    .tit_txt {
+                                        font-size: 16px;
+                                        width: auto;
+                                        padding-left: 15px;
+                                    }
+                                    .star2 {
+                                        background:yellow;
+                                        margin-left: 20px;
+                                        margin-top: 7px;
+                                        float: right;
+                                        width: 82px;
+                                        height:40px;
+                                        background:url(../img/yellowstar.png) repeat-x 0px 0px;
+                                        .value2 {
+                                            background: url(../img/star2.png) repeat-x 0px 0px;
+                                            height: 12px;
+                                            margin: 0;
+                                        }
+                                    }
+                                }
+                                .button_f {
+                                    height: 55px;
+                                    width: 225px;
+                                    font-size: 18px;
+                                    float: left;
+                                    padding: 2px 12px 5px 0;
+                                    position: relative;
+                                    .btn_07{
+                                        width: 100%;
+                                        height: 100%;
+                                        padding: 0;
+                                        line-height: 55px;
+                                        font-size: 18px;
+                                        font-weight: normal;
+                                        color: #fff;
+                                        background-color: #F450A2;
+                                        border-radius: 2px;
+                                        display: inline-block;
+                                        background: none repeat scroll 0 0 #F450A2;
+                                        text-align: center;
+                                    }
+                                    .btn_07_f{
+                                        height: 55px;
+                                        background: #fff;
+                                        border: 1px solid #e2e2e2;
+                                        font-weight: normal;
+                                        display: block;
+                                        width: 100px;
+                                        font: 700 14px/41px songti;
+                                        border-radius: 2px;
+                                        cursor: pointer;
+                                        font-weight: normal;
+                                        .mia_icons {
+                                            width: 100px;
+                                            height: 18px;
+                                            background: url(../img/taoxin.png) no-repeat center center;
+                                            display: block;
+                                            text-align: center;
+                                            margin-top: 8px;
+                                        }
+                                        span {
+                                            position: absolute;
+                                            bottom: 0px;
+                                            left: 38px;
+                                        }
+                                    }
+                                }
+                            }
+                            .other{
+                                overflow: hidden;
+                                padding: 3px 0 15px;
+                                padding-bottom: 5px;
+                                .other_name {
+                                    line-height: 20px;
+                                }
+                                .other_box {
+                                    float: left;
+                                    text-align: left;
+                                    height: 25px;
+                                    line-height: 25px;
+                                    text-align: right;
+                                    font-size: 12px;
+                                    color: gray;
+                                }
+                            }
+                            .pbox_pms{
+                                color: #999;
+                                list-style-type: disc;
+                                -webkit-margin-before: 1em;
+                                -webkit-margin-after: 1em;
+                                -webkit-margin-start: 0px;
+                                -webkit-margin-end: 0px;
+                                li{
+                                    float: left;
+                                    background: url(../img/dottered.png) no-repeat 0 center;
+                                    padding-left: 10px;
+                                    margin-right: 15px;
+                                    display: list-item;
+                                    // text-align: -webkit-match-parent;
+                                }
+                                .return-goods, .jiap {
+                                    position: relative;
+                                    cursor: pointer;
+                                    i{
+                                        height: 13px;
+                                        vertical-align: -2px;
+                                        color: #999;
+                                        cursor: pointer;
+                                        background: url(../img/why.png) no-repeat -3px center;
+                                        width: 19px;
+                                        display: inline-block;
+                                        text-align: right;
+                                    }
+                                }
+                                .return-goods{
+                                    width: 148px;
+                                    height:16px;
+                                    overflow:hidden;
+                                }
+                                .jiap{
+                                    // position: relative;
+                                    cursor: pointer;
+                                    background: url(../img/dottered.png) no-repeat 0 center;
+                                    overflow:hidden;
+                                    height:16px;
+                                    width:68px;
+                                }
+                            }
+
                         }
                     }
-                }
-                .l{
-                    float:left;
-                    display:inline;
                 }
             }
             .clearfix {
                 zoom: 1;
             }
+            .poppro{
+                background: #fff url(../img/cline.png) repeat-x 0 0;
+                overflow: hidden;
+                margin: 0;
+                padding: 38px 0 12px 0;
+                .cell{
+                    width:155px;
+                    float: left;
+                    position: relative;
+                    margin: 0 0 0 10px;
+                    .IMGa{
+                        width:155px;
+                        img{
+                            width:100%;
+                            vertical-align: top;
+                            border: solid 1px #ebebeb;
+                            margin-bottom: 6px;
+                        }
+                    }
+                    .p1 {
+                        color: #666;
+                        line-height: 18px;
+                        margin-bottom: 4px;
+                        &:hover a {
+                            color: #f34fa1;
+                        }
+                    }
+                    .p2 {
+                        color: #f34fa1;
+                        line-height: 18px;
+                    }
+                }
+            }
             // introduction
             .introduction{
-
+                padding-top: 20px;
+                .l{
+                    display: inline-block;
+                    
+                }
+                .left{
+                    width: 860px;
+                    background: #fff;
+                    .yahei {
+                        font-family: \5FAE\8F6F\96C5\9ED1;
+                    }
+                    .moduleFixed {
+                        width: 860px;
+                        line-height: 45px;
+                        height: 45px;
+                        background: #ff3b93;
+                        border-radius: 2px 2px 0 0;
+                        margin-bottom: 20px;
+                        .moFixed {
+                            width: 860px;
+                            background: #FF3B93;
+                        }
+                        .title li {
+                            float: left;
+                            padding: 0 20px;
+                            font-size: 14px;
+                            cursor: pointer;
+                            color: #fff;
+                            border-right: 1px solid #ff97ca;
+                            border-right: none;
+                        }
+                        .title .current {
+                            background: #ec0871;
+                        }
+                        @at-root{
+                            .p10 {
+                                border: 1px solid #ebebeb;
+                                .rel {
+                                    position: relative;
+                                    .spread{
+                                        a{
+                                            color:#8eecec;
+                                        }
+                                        
+                                    }
+                                }
+                                .area {
+                                    padding: 10px;
+                                    padding-bottom: 12px;
+                                    display: block;
+                                    .clearfix{
+                                        height:auto;
+                                        overflow: hidden;
+                                    }
+                                }
+                                .cs ul li{
+                                    padding: 6px 5px 6px 0;
+                                    color: #5b5b5b;
+                                    line-height: 20px;
+                                    float: left;
+                                    width: 350px;
+                                    height: 18px;
+                                    overflow: hidden;
+                                    b {
+                                        float: left;
+                                        width: 80px;
+                                        text-align: right;
+                                        padding-right: 5px;
+                                        text-align: left;
+                                    }
+                                   
+                                }
+                            }
+                            .con_detail {
+                                padding: 0;
+                               
+                            }  
+                        }                     
+                    }
+                }
             }
         }
     }

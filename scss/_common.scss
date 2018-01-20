@@ -7,6 +7,7 @@ body{
 }
 a{
 	text-decoration: none;
+	color:#666;
 }
 ul,li{
 	list-style: none;
@@ -14,4 +15,7 @@ ul,li{
 img{
 	border:none;
 	vertical-align: bottom;
+}
+em,i{
+	font-style:normal;
 }

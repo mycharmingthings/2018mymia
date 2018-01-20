@@ -85,15 +85,24 @@
     //桌面两边的移动出现框
     var navOffset=$(".header-nav").offset().top;
     $(window).scroll(function(){  
-        scrollPos=$(window).scrollTop(); 
+        scrollshop=$(window).scrollTop(); 
         // console.log(navOffset); 
-        if(scrollPos >=navOffset){  
+        if(scrollshop >=navOffset){  
             $('.sidebar').css('display', 'block'); 
         }else{  
             $('.sidebar').css('display', 'none');  
         }  
     });
-
+    
+      //商品详情吸顶效果
+  $(window).scroll(function(){  
+      scrollPosshop=$(window).scrollTop(); 
+      if(scrollPosshop >=1100){  
+          $('.fixone').css({ display: "block","z-index":100000000}); 
+      }else{  
+          $('.fixone').css('display', 'none');  
+      }  
+  });
 
 
 
@@ -113,6 +122,10 @@
             };
         };    
   })
+
+
+
+
 
 })(jQuery);
 //淘宝源声明的
