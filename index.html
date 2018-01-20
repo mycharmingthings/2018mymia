@@ -12,9 +12,9 @@
 </head>
 <body>
 <!-- 模态窗口 -->
- <div id="mask">
+ <div id="mask" style="display:none">
 </div>
-<div id="immidate_register" >
+<div id="immidate_register"  style="display:none">
     <a class="registerAimg"  href="http://www.mia.com/register?url=/cart" target="_blank" id="registA">
     </a>
     <a class="registerBimg"  href="javascript:;" id="registB">
@@ -23,9 +23,9 @@
     </div>
 </div>
 <!-- 吸顶效果 -->
-<div id="registerCimg" >         
+<div id="registerCimg" style="display:none" >         
 </div>
-<div id=fixed_img>
+<div id=fixed_img  style="display:none">
     <!-- <img src="img/fixed_right_img.png"  alt=""/> -->
     <span id="close_fixed_btn"></span>
 </div>
@@ -54,27 +54,27 @@
                    <img src="img/mai_1.png" width="100%" alt="">               
                </a>
                <div class="r">
-                     <div class="func-search">
+                    <div class="func-search">
                         <form class="clearfix Nsearch" name="search-form">
                             <input type="text" class="search-content" id="productWord" name="search-contentN" placeholder=""   data-url="">
                             <input id="searchButton" type="button" value="搜索" class="form-search-btn button">
                         </form>
                         <ul id="search-list">
                         </ul>                        
-                     </div> 
-                                       
-                     <div class="func-cart" id="cart_num_box">
-                            <a class="cart-item" href="javascript:;">
-                                <span class="shopping"><i class="iconfont icon-101"></i></span> 
-                                <span class="shopping2">  购物车 </span>                               
-                            </a>                                                   
-                   </div>                 
-                   <div class="emptybox"></div>
-                   <div class="cart-more" id="shop_cart">
-                       <p class="empty">购物车还没有商品，快去选购吧！</p>
-                   </div> 
-                   <div class="emempoty"></div> 
-                   
+                    </div> 
+                    <div class="shoppingcart">               
+                        <div class="func-cart" id="cart_num_box">
+                                <a class="cart-item" href="javascript:;">
+                                    <span class="shopping"><i class="iconfont icon-101"></i></span> 
+                                    <span class="shopping2">  购物车 </span>                               
+                                </a>                                                   
+                        </div>                 
+                        <div class="emptybox"></div>
+                        <div class="cart-more" id="shop_cart">
+                        <p class="empty">购物车还没有商品，快去选购吧！</p>
+                        </div> 
+                        <div class="emempoty"></div> 
+                    </div>   
                 </div>          
             </div>          
         </div>

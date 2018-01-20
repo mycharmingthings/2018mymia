@@ -16,16 +16,17 @@
     
     //购物车消失
     $(document).ready(function(){
-        $('.func-cart').bind('mouseover', function(){
+       
+        $('.shoppingcart').bind('mouseover', function(){
             $('.cart-more').css('display','block');
             $('.emptybox').css('display','block');
             $('.emempoty').css('display','block');
        });
-    $('.func-cart').bind('mouseleave', function(){
+      $('.shoppingcart').bind('mouseleave', function(){
             $('.cart-more').css('display','none');
             $('.emptybox').css('display','none');
             $('.emempoty').css('display','block');
-    })
+      });
 
     
     //正品保证clearInterval(iTimer);
