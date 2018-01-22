@@ -56,9 +56,11 @@ $width2:1100px;
     position: relative;
     z-index: 300;
     .w1004 {
-        height: 100px;
+        // height: 100px;
         width: 1000px;
         margin: 0 auto;
+        border-bottom:1px solid #eee;
+        margin-bottom:20px;
         .logo {
             background-position: 168px 64px;
             height: 100px;
@@ -139,10 +141,434 @@ $width2:1100px;
             width: 87px;
             text-align: left!important;
             margin-left: 20px;
+            font-size: 12px;
+            font-family: Verdana,Geneva,sans-serif;
+            color: #666;
+        }
+        .ci1{
+            width: 280px;
+            font-size: 12px;
+            font-family: Verdana,Geneva,sans-serif;
+            color: #666;
+        }
+        .ci2{
+            width: 113px;
+            border-left: 1px solid #ddd;
+            font-size: 12px;
+            font-family: Verdana,Geneva,sans-serif;
+            color: #666;
+        }
+        .ci3{
+            width: 113px;
+            border-left: 1px solid #ddd;
+            font-size: 12px;
+            font-family: Verdana,Geneva,sans-serif;
+            color: #666;
+        }
+        .ci4{
+            width: 113px;
+            border-left: 1px solid #ddd;
+            font-size: 12px;
+            font-family: Verdana,Geneva,sans-serif;
+            color: #666;
+        }
+        .ci5{
+            width: 113px;
+            border-left: 1px solid #ddd;
+            font-size: 12px;
+            font-family: Verdana,Geneva,sans-serif;
+            color: #666;
+        }
+        .ci6 {
+            width: 113px;
+            border-left: 1px solid #ddd;
+            font-size: 12px;
+            font-family: Verdana,Geneva,sans-serif;
+            color: #666;
         }
     }
 }
-
+.c_list {
+    
+    overflow: inherit;
+    background: #fff;
+    padding: 0 15px;
+    border: 1px solid #ededed; 
+    .cl_con {
+        height:400px;
+        margin-bottom: 0px; 
+        .cl_promotion{
+            .cl_tit{
+                .cl_mck {
+                    .mck{
+                        opacity: 0;
+                        vertical-align: middle;
+                        margin-bottom: 0;
+                        margin-right: 5px;
+                        width: 100%;
+                        height: 80%;
+                        line-height: normal;
+                        outline: 0;
+                        font-size: 12px;
+                        font-family: inherit;
+                    } 
+                }
+                .cl_tag.disabled {
+                    background: none;
+                    width: auto;
+                    height: 28px;
+                    margin-left: 19px;
+                    margin-right: 10px;
+                    span{
+                        display: inline-block;
+                        padding: 0 8px;
+                        background: #fb5b71;
+                        color: #fff;
+                        text-align: center;
+                        height: 22px;
+                        width: auto;
+                        line-height: 22px;
+                        font-size: 14px;
+                    }
+                }
+                .cl_words_new {
+                    margin-top: 4px!important;
+                    .full_diff_money {
+                        color: #fb5b71;
+                        font-size: 14px;
+                    }
+                }
+                .cl_items {
+                    font-size: 12px;
+                    font-family: Verdana,Geneva,sans-serif;
+                    color: #666;
+                    clear:left;
+                    background: #fff;
+                    .clearfix:after{
+                        content: ".";
+                        display: block;
+                        height: 0;
+                        clear: both;
+                        visibility: hidden;
+                    }
+                    .gooditem{
+                        border-bottom: none;
+                        position: relative;
+                        margin: 0;
+                        padding-left: 14px;
+                        padding: 12px 0;
+                        .it_mck{
+                            position: relative;
+                            z-index: 2;
+                            background: url(../img/arrowRed.png)  repeat-y 0 42px;;
+                            width: 20px;
+                            .mck{
+                                opacity: 0;
+                                vertical-align: middle;
+                                margin-bottom: 0;
+                                margin-right: 5px;
+                                width: 100%;
+                                height: 80%;
+                                line-height: normal;
+                                outline: 0;
+                                font-size: 12px;
+                                font-family: inherit;
+                            }
+                        }
+                        div{
+                            float:left;
+                        }
+                        .it_img{
+                            position: relative;
+                            width: 80px;
+                            height: 80px;
+                            border: 1px solid #ddd;
+                            margin-right: 15px;
+                            margin-left: 16px;
+                        }
+                        .it_des{
+                            width: 240px;
+                            line-height: 16px;
+                            .dtz{
+                                float: left;
+                                margin: 3px 3px 0 0;
+                                line-height: 16px;
+                            }
+                            .tzname{
+                                float: left;
+                                margin-top: 3px;
+                                width: 195px;
+                                height: 32px;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                margin-bottom: 6px;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                display: -webkit-box;
+                                -webkit-line-clamp: 2;
+                                -webkit-box-orient: vertical;
+                            }
+                            .goods_select{
+                                color: #adadad;
+                            }
+                            .preSale_txt{
+                                color: #ff69b4;
+                                padding-top: 5px;
+                            }
+                        }
+                        .it_size{
+                            width: 115px;
+                            margin-top: 3px;
+                            line-height: 16px;
+                            text-align: center;
+                            color: #999;
+                            word-break: break-all;
+                        }
+                        .it_price{
+                            width: 115px;
+                            text-align: center;
+                            margin-top: 3px;
+                            .goodmp {
+                                margin-top: 10px;
+                                color: #999;
+                                text-decoration: line-through;
+                            }
+                        }
+                        .it_num{
+                            width: 115px;
+                            text-align: center;
+                            margin-top: 3px; 
+                            .dp_bt {
+                                position: relative;
+                                height: 22px;
+                                line-height: 22px;
+                                border: 1px solid #e2e2e2;
+                                margin: 0 auto;
+                                width: 75px;
+                                background-color: #fff;
+                                .dp_jian {
+                                    background-position: 0 -22px;
+                                    border-right: 1px solid #e2e2e2;
+                                }
+                                .dpcom {
+                                    float: left;
+                                    width: 22px;
+                                    height: 22px;
+                                    display: inline-block;
+                                    cursor: pointer;
+                                    background: url(../img/jiajian.png) no-repeat ;
+                                }
+                                .dp_num {
+                                    background-color: #FFF;
+                                    line-height: 22px;
+                                    text-align: center;
+                                    width: 28px;
+                                    height: 22px;
+                                    float: left;
+                                    overflow: hidden;
+                                    border: 0 none;
+                                }
+                                .dp_jia {
+                                    float: left;
+                                    background-position: -22px -22px;
+                                    border-left: 1px solid #e2e2e2;
+                                }
+                                .pink {
+                                    color: #f450a2;
+                                    float: left;
+                                    padding-top: 8px;
+                                    line-height: 1.5;
+                                    width: 100%;
+                                    display: none;
+                                }
+                            } 
+                            .limit_buy{
+                                clear:left;
+                                height: 5px;
+                                width:75px;
+                            }
+                        }
+                        .it_total {
+                            width: 115px;
+                            text-align: center;
+                            margin-top: 3px;
+                            color: #ff69b4;
+                        }
+                        .it_operate {
+                            text-align: center;
+                            margin-top: 3px;
+                            margin-left: 30px;
+                            width: 48px;
+                        }
+                        .midou_dikou{
+                            clear: both;
+                            width: 100%;
+                            .midou_dikou_m {
+                                position: relative;
+                                margin: 15px 0 0 50px;
+                                padding-left: 23px;
+                                height: 32px;
+                                line-height: 32px;
+                                font-size: 14px;
+                                color: #666;
+                                background: #fff6fa;
+                                .mid_max{
+                                    display:none;
+                                }
+                                .tp1 {
+                                    display: inline-block;
+                                    .ts1 {
+                                        margin-right: 15px;
+                                        color: #333;
+                                    }
+                                }
+                                .midou_btn {
+                                    display: inline-block;
+                                    margin-left: 18px;
+                                    border: 1px #ff447c solid;
+                                    width: 64px;
+                                    height: 18px;
+                                    line-height: 18px;
+                                    text-align: center;
+                                    font-size: 12px;
+                                    color: #fff;
+                                    background: #ff447c;
+                                    border-radius: 10px;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                }
+           }
+        }
+     } 
+    .cl_tit {
+        position: relative;
+        overflow: visible;
+        padding-left: 20px;
+        padding: 14px 26px;
+        line-height: 20px;
+        background: #fafafa;
+        div {
+            float: left;
+            margin-top: 2px;
+            padding-bottom: 2px;
+        }
+    }
+    .inputwarp {
+        background-position: 0 -176px;
+        background: url(../img/arrowRed.png) no-repeat 0 263px;
+        background-repeat: repeat-y;
+        width: 23px;
+        height: 22px;
+        display: inline-block;
+        position: relative;
+        left: 2px;
+        .mckall{
+            opacity: 0;
+            vertical-align: middle;
+            margin-bottom: 0;
+            margin-right: 5px;  
+            width: 100%;
+            height: 80%;     
+            line-height: normal;
+            outline: 0;
+            font-size: 12px;
+            font-family: inherit;     
+        }
+    }
+    .cl_wordsNew{
+        clear:right;
+        margin-left: 5px;
+        margin-top: 4px!important;
+        font-size: 18px;
+        color: #333;
+        font-family: 'Microsoft YaHei';
+    }
+    .cl_tit_Newbg{
+        padding-right:20px;
+    }
+}
+.clearfix:after{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.c_countn {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-right: none;
+    height: 58px;
+    margin: 50px 15px 0;
+    position: relative;
+    div{
+        display: inline-block;
+    }
+    .funcs {
+        margin-left: 20px;
+        line-height: 58px;
+        position: absolute;
+        .inputwarp{
+            background: url(../img/arrowRed.png) no-repeat 0 263px;
+            background-repeat: repeat-y;
+            width: 23px;
+            height:23px;
+            display: inline-block;
+            position: relative;
+            left: 2px;
+            position: relative;
+            top: 16px;
+            .mckall{
+                opacity: 0;
+                vertical-align: middle;
+                margin-bottom: 0;
+                margin-right: 5px;
+                width: 100%;
+                height: 80%;
+                line-height: normal;
+                outline: 0;
+                font-size: 12px;
+                font-family: inherit;
+            }
+        }
+        label {
+            font-size: 14px;
+            font-weight: bold;
+            padding-right: 15px;
+        }
+        a {
+            padding-left: 5px;
+            &:hover{
+                color:#ff447c;
+            }
+        }
+    }
+    .newCart {
+        margin-left: 490px;
+        text-align: left;
+        div{
+            margin: 5px;
+        }
+        .ze {
+            color: #333;
+            font-weight: 700;
+            line-height: 18px;
+            padding-top: 6px;
+            margin-top: 15px;
+            span{
+                label {
+                    font-size: 18px;
+                    color: #fa4b9b;
+                    font-weight: 400;
+                    vertical-align: top;
+                }
+            }
+        }
+    }
+}
 
 /*last part footer*/
 .footer{

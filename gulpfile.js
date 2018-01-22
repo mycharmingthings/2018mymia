@@ -10,6 +10,25 @@ var uglify = require("gulp-uglify");
 //引入gulp-rename插件
 var rename = require("gulp-rename");
 
+// var  minify = require("gulp-babel-minify");
+// var cloneDeep = require('lodash');
+ 
+// gulp.task("copy-minify", () =>{
+//   gulp.src("scss/*.scss")
+//     .pipe(minify({
+//       mangle: {
+//         keepClassName: true
+//       }
+//     }))
+//     .pipe(gulp.dest("D:\\phpStudy\\WWW\\gulpmiaTest\\dist\\dist"));
+// });
+
+
+//压缩文件
+// gulp.task("min",function(){
+//     gulp.src("scss/*.scss").pipe(uglify()).
+//     pipe(gulp.dest("D:\\phpStudy\\WWW\\gulpmiaTest\\dist\\dist"));
+// })
 
 //把根目录下的所有的html文件复制到发布目录下
 gulp.task("copy-html",function () {
@@ -89,6 +108,7 @@ gulp.task("sassfile",function () {
 
 //监听 gulp.watch  总函数有问题 要单独调用
 gulp.task("watchall",function () {
+    gulp.watch("*scss/*.scss",["copy-minify"]);
     //gulp.watch("index.html",["copy-index"]);//一旦index.html文件发生了 变化执行copy-index命令 在cmd里输入gulp watchall
      gulp.watch("*.html",["copy-html"]);
     //  gulp.watch("img/*.jpg",["copy-jpg"]);
