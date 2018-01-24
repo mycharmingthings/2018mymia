@@ -26,6 +26,8 @@
         mysql_close($conn);
         //三、响应
         echo "注册成功！";
+        echo "<script>location.href='../index.html'</script>";
+        // header("Location: index.html"); 
     }else{
         //三、响应
         echo "注册失败，该用户名已经存在！";
