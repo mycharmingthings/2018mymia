@@ -7,7 +7,8 @@
     <title>登录 - 蜜芽，中国领先的进口母婴限时特卖商城</title>
     <script src="js/jquery-1.8.3.min.js"></script>
     <link rel="stylesheet" href="dist/load.css">
-    <script src="js/load.js"></script>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/cookie.js"></script>
 </head>
 <body>
     <div class="bodybox">      
@@ -26,20 +27,25 @@
                         <a class="r_a" href="/register?url=/">30秒注册</a>
                     </span>
                 </div>
-                <form class="load_c" action="">
+
+               
+               
+                <div class="load_c" >
                     <div class="ph_number" id="sh_number">
                         <div class="ph_img"> </div>
-                        <input class="ph_input" type="text" placeholder="手机号" id="login_username" name="username" class="input" validate="required" tabindex="1" value=""/>
-                        <span id="show" style="color:red; line-height:35px;font-size:20px; display:none;">&times</span>
+                        <input class="ph_input" type="text" placeholder="用户名" id="username" name="username" class="input" validate="required" tabindex="1" value=""/>
+                        <!-- 验证用户名的显示 -->
+                        <p id="usernameMsg" class="usernameMsgs"></p>
                     </div>
                     <div class="phone_code">
-                        <input class="ph_code" type="text"  placeholder="短信验证码" id="login_userpass" name="username" class="input" validate="required" tabindex="1" value=""/>
-                        <a class="phaaa" href=""> 获取短信验证码</a>
+                        <input class="ph_code" type="password"  placeholder="" id="userpass" name="userpass" class="input" validate="required" tabindex="1" value=""/>
+                        <a class="phaaa" href=""> 请输入您的密码</a>
                     </div>
-                    <p class="errMsg">  短信验证码错误</p><br/>
-                    <p class="load_btn" id ='btn' ><a>登 录</a></p>
-                </form>
-                
+                    <!-- 验证密码的显示 -->
+                    <p class="errMsg" id="errorMsg" > 您输入的账户或者密码有误，请重新输入</p><br/>
+                    <input class="load_btn" id="btnlogin" type="submit"  value="登录"/>
+                </div>  
+        
                 <div class="loadfooter">
                       <div class="p">
                           <span>使用以下账号登录: </span>
@@ -47,8 +53,7 @@
                           </a>
                           <a class="login_sina" data-tag="weibo" href="jvascript:;" title="使用新浪微博帐号登录">
                           </a>
-                      </div>
-                     
+                      </div>                    
                 </div>
             </div>
         </div>
@@ -59,3 +64,32 @@
    
 </body>
 </html>
+
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+$(function () {
+    $("#btnlogin").click(function () {
+        $.ajax({
+           type:"POST",
+           url:"php/logincheck02.php",
+           data:{
+              "username":$("#username").val(),
+              "userpass":$("#userpass").val()
+           },
+            success:function (t) {
+                if(t=="1"){ 
+                     //写cookie vip为随便写的一个cookie名                  
+                    setCookie('vip',JSON.stringify($("#username").val()) , 7, '/');
+                    location.href="index.html";
+
+                }else{
+                    $("#errorMsg").html("用户名或者密码错误");
+                    $("#errorMsg").show();
+                }
+            }
+        });
+    });
+
+});
+
+</script>
