@@ -1,13 +1,83 @@
 (function($){
     $.noConflict();
     
-    //购物车消失
+    
     $(document).ready(function(){
-        $('.func-cart').bind('mouseover', function(){
-            $('.cart-more').css('display','block');
-            $('.emptybox').css('display','block');
-            $('.emempoty').css('display','block');
-       });
+        console.log(1)
+        $.ajax({
+            type:"get",
+             url:"php/getGoodsList.php",
+             success:function(data){
+                showgoodsList(data);
+             },
+             dataType:"json"
+        });
+
+
+        function showgoodsList(datas){
+            let oUl_List = $('.lione');
+            console.log(datas.length);
+            for(let i = 0; i < datas.length; i++){
+                let str = `
+                    <li class="goods-items">
+                    <div class="block lineblockone" id="item_1154336" data-sku="1154336" style="left: inherit; top: inherit;">
+                      
+                        <div class="mark_wrap_x46">
+                            <span class="mark_item mark_dutyfree"></span>
+                            <img class="lazyload" src="${datas[i].beiyong2}">
+                        </div>
+                       
+                        <div class="mark_custom_120" data-url="https://file02.miyabaobei.com/">
+                            <img class="lazyload" src="${datas[i].beiyong3}">
+                        </div>
+                       
+                        <div class="icoAr" style="display: block;"></div>
+                       
+                        <div class="listsoldout pos"></div>
+                        <span class="listsoldspan">${datas[i].beiyong4}</span>
+                        
+                        <a href="/item-1154336.html" title="美赞臣 MeadJohnson 【官方授权旗舰店】安婴妈妈A+孕妇奶粉 900g*2罐" target="_blank">
+                            <img src="${datas[i].goodsImg}" width="267" height="267" alt="【官方授权旗舰店】安婴妈妈A+孕妇奶粉 900g*2罐">
+                        </a>
+                             
+                        <div class="bmfo rel" id="item_k_1154336">
+                            <div class="saled">
+                                <span class="r">
+                                </span>
+                                <div class="pricediv">
+                                    <em class="pink l">¥</em>
+                                    <span class="Tahoma f20 pink l blod" bid="1154336" id="sale_price_1154336">${datas[i].beiyong5}</span>
+                                        <span class="originalPrice r">¥378</span>
+                                        <div class="suit_tz_price l">单件<span>${datas[i].beiyong6}</span>元</div>
+                                </div>
+                            </div>
+                            <p class="blockhover"> 
+                                <span class="pink tahoma bold"><em>${datas[i].goodsCount}</em>件装/</span>
+                                <a href="/item-1154336.html" target="_blank" title="美赞臣 MeadJohnson 【官方授权旗舰店】安婴妈妈A+孕妇奶粉 900g*2罐">
+                                ${datas[i].goodsName}                                               
+                                </a>
+                            </p>
+                            <div class="tahoma_active">
+                                    <span>${datas[i].beiyong7}</span>${datas[i].goodsDesc}                                           
+                            </div>
+                        </div>
+                    </div>
+                </li>     
+                `
+                oUl_List.append(str);
+            }
+        }
+
+
+
+
+
+   //购物车消失
+    $('.func-cart').bind('mouseover', function(){
+        $('.cart-more').css('display','block');
+        $('.emptybox').css('display','block');
+        $('.emempoty').css('display','block');
+    });
     $('.func-cart').bind('mouseleave', function(){
             $('.cart-more').css('display','none');
             $('.emptybox').css('display','none');
@@ -56,32 +126,6 @@
     })
 
 
-
-   //张悦 侧边栏代码
-    // oChooseDl.on('mouseenter', function () {
-    //     clearTimeout(iTimer);
-    //     let iIndex = oChooseDl.index($(this));
-    //     oListDt.css('background', '#f8f8f8').eq(iIndex).css('background', '#ffffff');
-    //     oListPanel.css('display', 'none').eq(iIndex).css('display', 'block');
-    // });
-    // oChooseDl.on('mouseleave', function () {
-    //     iTimer = setTimeout(function () {
-    //         oListDt.css('background', '#f8f8f8');
-    //         oListPanel.css('display', 'none');
-    //     }, 50);
-    // });
-   
-    // oListPanel.hover(function () {
-    //     clearTimeout(iTimer);
-    // }, function () {
-    //     let iIndex = oChooseDl.index($(this));
-    //     oListDt.eq(iIndex).css('background', '#ffffff');
-    // });
-
-
-
-
- 
     //桌面两边的移动出现框
     var navOffset=$(".header-nav").offset().top;
     $(window).scroll(function(){  
@@ -112,7 +156,10 @@
                 oSearchList.style.display = 'block';
             };
         };    
-  })
+ 
+ 
+ 
+    })
 
 })(jQuery);
 //淘宝源声明的
@@ -141,4 +188,33 @@
 
 function $(id){
     return document.getElementById(id);
+}
+
+window.onload = function(){
+    //程溪商品列表页的代码
+    $.ajax({
+        type:"get",
+         url:"php/getGoodsList.php",
+         success:function(data){
+            showgoodsList(data);
+            var oGoodsDiv = document.getElementsByClassName('goods-item-wrapper');
+            // console.log(oGoodsDiv);
+            for(var i = 0;i < oGoodsDiv.length;i++){
+                oGoodsDiv[i].onclick = function(){
+                    console.log(1)
+                    var iId = this.getAttribute('data-id');
+        
+                    var oGoods = {
+                        id : iId
+                    }
+        
+                    setCookie('goods',JSON.stringify(oGoods),7,'/');
+                }
+            }
+         },
+         dataType:'json'
+    });
+
+
+
 }

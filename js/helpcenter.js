@@ -38,16 +38,15 @@
     }) 
 
     sideAllGood.bind('mouseleave',function(){
-
             sideDispear.css('display','none');
             sideFather.css('background','none');  
-            // sideFather.css({overflow:"hidden",height:"50px"});
+            sideFather.css({overflow:"hidden",height:"50px"});
        
     })
 
 
     $(function(){
-        $(".product_sort .bd .item").hover(function(){
+        $(".product_sort .hd .bd .item").hover(function(){
             console.log(1);
             $(this).addClass("layer");
         },function(){
