@@ -1,0 +1,235 @@
+body, div, p, h1, h2, h3, h4, h5, h6, hr, ul, ol, li, dd, dt, dl, table, tr, td, fieldset, caption, form, input, img, legend {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #eee; }
+
+a {
+  text-decoration: none; }
+
+ul, li {
+  list-style: none; }
+
+img {
+  border: none;
+  vertical-align: bottom; }
+
+.htmleaf-container {
+  width: 230px;
+  height: 630px; }
+  .htmleaf-container .product_sort {
+    margin: 20px;
+    width: 225px;
+    height: 707px;
+    background: #fff;
+    position: relative;
+    z-index: 90;
+    box-sizing: border-box; }
+    .htmleaf-container .product_sort .hd {
+      width: 226px;
+      height: 52px;
+      background-color: #f92a85;
+      z-index: 1;
+      line-height: 52px;
+      text-indent: 24px;
+      font-size: 15px;
+      font-weight: bold;
+      color: #fff; }
+      .htmleaf-container .product_sort .hd .item {
+        display: block;
+        width: 182px;
+        height: 21px;
+        white-space: nowrap;
+        overflow: hidden; }
+        .htmleaf-container .product_sort .hd .item .one {
+          color: #f92c86;
+          width: 78px;
+          height: 17px; }
+    .htmleaf-container .product_sort .bd {
+      width: 226px;
+      padding-bottom: 10px; }
+      .htmleaf-container .product_sort .bd .item {
+        height: 82px;
+        position: relative;
+        border-bottom: 1px solid transparent;
+        box-sizing: border-box; }
+        .htmleaf-container .product_sort .bd .item .subitem {
+          display: none; }
+        .htmleaf-container .product_sort .bd .item .title {
+          width: 226px;
+          text-indent: 17px;
+          height: 30px;
+          line-height: 30px;
+          overflow: hidden;
+          font-size: 14px;
+          font-weight: bold;
+          color: #292929; }
+          .htmleaf-container .product_sort .bd .item .title a {
+            color: #fb60a7;
+            position: relative;
+            padding-left: 5px; }
+            .htmleaf-container .product_sort .bd .item .title a i {
+              width: 19px;
+              height: 19px;
+              background-position: 0 0;
+              left: -25px;
+              top: -3px; }
+        .htmleaf-container .product_sort .bd .item .list {
+          width: 200px;
+          padding-left: 5px;
+          margin-left: 15px;
+          height: 50px;
+          line-height: 20px;
+          background: url(../img/sideDot.jpg) repeat-x 5px 47px; }
+          .htmleaf-container .product_sort .bd .item .list a {
+            font-family: "Microsoft YaHei",Arial,sans-serif;
+            color: #666;
+            font-size: 12px;
+            display: inline-block;
+            vertical-align: middle; }
+            .htmleaf-container .product_sort .bd .item .list a:hover {
+              color: #fb60a7; }
+        .htmleaf-container .product_sort .bd .item .arrow {
+          font-family: "Microsoft YaHei",Arial,sans-serif;
+          font-size: 20px;
+          color: #c0d7f9;
+          position: absolute;
+          right: 10px;
+          top: 27px; }
+        .htmleaf-container .product_sort .bd .item .lineleft {
+          position: absolute;
+          left: 0px;
+          top: -1px;
+          width: 4px;
+          height: 81px;
+          background-color: #fb60a7;
+          z-index: 95;
+          display: none; }
+      .htmleaf-container .product_sort .bd .layer {
+        background: white;
+        border-bottom: 1px solid #eee;
+        box-sizing: border-box; }
+        .htmleaf-container .product_sort .bd .layer .line {
+          position: absolute;
+          right: -8px;
+          top: 0px;
+          width: 20px;
+          height: 80px;
+          background-color: white;
+          display: block;
+          z-index: 10000; }
+        .htmleaf-container .product_sort .bd .layer .lineleft {
+          position: absolute;
+          left: 0px;
+          top: -1px;
+          width: 4px;
+          height: 81px;
+          background-color: #fb60a7;
+          z-index: 95;
+          display: block; }
+        .htmleaf-container .product_sort .bd .layer .list {
+          width: 200px;
+          padding-left: 5px;
+          margin-left: 15px;
+          height: 50px;
+          line-height: 20px;
+          overflow: hidden;
+          background-image: none; }
+          .htmleaf-container .product_sort .bd .layer .list a {
+            font-family: "Microsoft YaHei",Arial,sans-serif;
+            color: #666;
+            font-size: 12px;
+            display: inline-block;
+            vertical-align: middle; }
+            .htmleaf-container .product_sort .bd .layer .list a:hover {
+              color: #fb60a7; }
+        .htmleaf-container .product_sort .bd .layer .arrow {
+          display: none; }
+        .htmleaf-container .product_sort .bd .layer .subitem {
+          background: white;
+          display: block;
+          position: absolute;
+          width: 870px;
+          top: 0;
+          left: 225px;
+          height: 390px;
+          border-left: 1px solid #eee;
+          box-sizing: border-box; }
+          .htmleaf-container .product_sort .bd .layer .subitem .columstotol {
+            float: left;
+            width: 530px;
+            height: 360px; }
+            .htmleaf-container .product_sort .bd .layer .subitem .columstotol .columone {
+              width: 230px;
+              float: left;
+              margin: 0 10px; }
+              .htmleaf-container .product_sort .bd .layer .subitem .columstotol .columone h3 {
+                padding-bottom: 8px;
+                font-size: 14px;
+                border-bottom: 1px solid #e5e5e5;
+                box-sizing: border-box;
+                color: #222;
+                display: block;
+                -webkit-margin-before: 1em;
+                -webkit-margin-after: 1em;
+                -webkit-margin-start: 0px;
+                -webkit-margin-end: 0px;
+                font-weight: bold; }
+              .htmleaf-container .product_sort .bd .layer .subitem .columstotol .columone p {
+                width: 250px;
+                height: 48px;
+                display: block;
+                -webkit-margin-before: 1em;
+                -webkit-margin-after: 1em;
+                -webkit-margin-start: 0px;
+                -webkit-margin-end: 0px;
+                margin-top: 10px; }
+                .htmleaf-container .product_sort .bd .layer .subitem .columstotol .columone p a {
+                  display: inline-block;
+                  vertical-align: top;
+                  margin-right: 10px;
+                  line-height: 2;
+                  font-size: 12px;
+                  color: #666; }
+                  .htmleaf-container .product_sort .bd .layer .subitem .columstotol .columone p a:hover {
+                    color: #ff3893; }
+                .htmleaf-container .product_sort .bd .layer .subitem .columstotol .columone p .hot {
+                  color: #ff3893; }
+          .htmleaf-container .product_sort .bd .layer .subitem .brandsone {
+            float: right;
+            width: 258px;
+            height: 272px;
+            margin-right: 37px; }
+            .htmleaf-container .product_sort .bd .layer .subitem .brandsone h3 {
+              padding-bottom: 8px;
+              font-size: 14px;
+              color: #222;
+              display: block;
+              -webkit-margin-before: 1em;
+              -webkit-margin-after: 1em;
+              -webkit-margin-start: 0px;
+              -webkit-margin-end: 0px;
+              font-weight: bold; }
+            .htmleaf-container .product_sort .bd .layer .subitem .brandsone .clearbrandsone {
+              width: 253px;
+              height: 243px; }
+              .htmleaf-container .product_sort .bd .layer .subitem .brandsone .clearbrandsone a {
+                display: block;
+                float: left;
+                width: 84px;
+                height: 84px;
+                box-sizing: border-box;
+                border: 1px solid #e5e5e5; }
+                .htmleaf-container .product_sort .bd .layer .subitem .brandsone .clearbrandsone a img {
+                  display: block;
+                  width: 82px;
+                  height: 82px; }
+        .htmleaf-container .product_sort .bd .layer .subitem_5 {
+          top: -100px; }
+        .htmleaf-container .product_sort .bd .layer .subitem_6 {
+          top: -200px; }
+        .htmleaf-container .product_sort .bd .layer .subitem_7 {
+          top: -300px; }
+        .htmleaf-container .product_sort .bd .layer .subitem_8 {
+          top: -300px; }
