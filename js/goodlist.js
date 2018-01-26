@@ -9,6 +9,23 @@
              url:"php/getGoodsList.php",
              success:function(data){
                 showgoodsList(data);
+                var oGoodsDiv = document.getElementsByClassName('goods-items');
+                for(var i = 0;i < oGoodsDiv.length;i++){
+                        oGoodsDiv[i].onclick = function(){
+                            console.log(1)
+                           
+                            var iId = this.getAttribute('data-id');
+                
+                                var oGoods = {
+                                    id : iId
+                                }
+                
+                            setCookie('goods',JSON.stringify(oGoods),7,'/');
+                            // console.log("getCookie(name)"+getCookie('goods'));
+
+                        }
+                    }
+
              },
              dataType:"json"
         });
@@ -19,7 +36,7 @@
             console.log(datas.length);
             for(let i = 0; i < datas.length; i++){
                 let str = `
-                    <li class="goods-items">
+                    <li class="goods-items" data-id="${datas[i].goodsId}">
                     <div class="block lineblockone" id="item_1154336" data-sku="1154336" style="left: inherit; top: inherit;">
                       
                         <div class="mark_wrap_x46">
@@ -36,7 +53,7 @@
                         <div class="listsoldout pos"></div>
                         <span class="listsoldspan">${datas[i].beiyong4}</span>
                         
-                        <a href="/item-1154336.html" title="美赞臣 MeadJohnson 【官方授权旗舰店】安婴妈妈A+孕妇奶粉 900g*2罐" target="_blank">
+                        <a href="shoppingdetail.html" title="美赞臣 MeadJohnson 【官方授权旗舰店】安婴妈妈A+孕妇奶粉 900g*2罐" target="_blank">
                             <img src="${datas[i].goodsImg}" width="267" height="267" alt="【官方授权旗舰店】安婴妈妈A+孕妇奶粉 900g*2罐">
                         </a>
                              
@@ -97,48 +114,49 @@
    
 
 
-    //侧边栏选项卡
-    let sideAllGood = $(".htmleaf-container .product_sort .hd");
-    let sideDispear = $(".htmleaf-container .product_sort .bd");
-    let sideFather = $(".htmleaf-container .product_sort");
+      //侧边栏选项卡
     
-    sideAllGood.bind('mouseenter',function(){             
-        sideDispear.css('display','block');  
-        sideFather.css('background','white');       
-    }) 
-
-    sideAllGood.bind('mouseleave',function(){
-
-            sideDispear.css('display','none');
-            sideFather.css('background-color','none');  
-            // sideFather.css({overflow:"hidden",height:"50px"});
-       
+    $('.hd').mouseover(function(){
+        $('.bd').show();
+    })
+    $('.hd').mouseout(function(){
+        $('.bd').hide();
     })
 
-
-    $(function(){
-        $(".product_sort .bd .item").hover(function(){
-            console.log(1);
-            $(this).addClass("layer");
-        },function(){
-            $(this).removeClass("layer");
-        });
+    $('.item').hover(function(){
+        var index = $('.item').index($(this));
+        $('.subitem').eq(index).show();
+        $(this).addClass("layer");
+    },function(){
+        var index = $('.item').index($(this));
+        $('.subitem').eq(index).hide();
+        $(this).removeClass("layer");
     })
 
+    
+    $('.smore').toggle(
+        function () {
+            $('.smore').html("收起");
+            $('.Q2').css({'overflow':'auto','height':'80px'});
+        },
+        function () {
+            $('.smore').html("更多"); 
+            $('.Q2').css({'height':'24px','overflow':'hidden'});
+        }
+    );
+
+   
 
     //桌面两边的移动出现框
     var navOffset=$(".header-nav").offset().top;
     $(window).scroll(function(){  
         scrollPos=$(window).scrollTop(); 
-        // console.log(navOffset); 
         if(scrollPos >=navOffset){  
             $('.sidebar').css('display', 'block'); 
         }else{  
             $('.sidebar').css('display', 'none');  
         }  
     });
-
-
 
 
 
@@ -190,31 +208,3 @@ function $(id){
     return document.getElementById(id);
 }
 
-window.onload = function(){
-    //程溪商品列表页的代码
-    $.ajax({
-        type:"get",
-         url:"php/getGoodsList.php",
-         success:function(data){
-            showgoodsList(data);
-            var oGoodsDiv = document.getElementsByClassName('goods-item-wrapper');
-            // console.log(oGoodsDiv);
-            for(var i = 0;i < oGoodsDiv.length;i++){
-                oGoodsDiv[i].onclick = function(){
-                    console.log(1)
-                    var iId = this.getAttribute('data-id');
-        
-                    var oGoods = {
-                        id : iId
-                    }
-        
-                    setCookie('goods',JSON.stringify(oGoods),7,'/');
-                }
-            }
-         },
-         dataType:'json'
-    });
-
-
-
-}

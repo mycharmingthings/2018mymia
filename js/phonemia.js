@@ -27,33 +27,31 @@
    
 
 
-    //侧边栏选项卡
-    let sideAllGood = $(".htmleaf-container .product_sort .hd");
-    let sideDispear = $(".htmleaf-container .product_sort .bd");
-    let sideFather = $(".htmleaf-container .product_sort");
-    
-    sideAllGood.bind('mouseenter',function(){             
-        sideDispear.css('display','block');  
-        sideFather.css('background','white');       
-    }) 
+   //侧边栏选项卡
+   $(function(){
+    $(".product_sort .hd .bd .item").hover(function(){
+        console.log(1);
+        $(this).addClass("layer");
+    },function(){
+        $(this).removeClass("layer");
+    });
+})
+$('.hd').mouseover(function(){
+    $('.bd').show();
+})
+$('.hd').mouseout(function(){
+    $('.bd').hide();
+})
 
-    sideAllGood.bind('mouseleave',function(){
-
-            sideDispear.css('display','none');
-            sideFather.css('background','none');  
-            // sideFather.css({overflow:"hidden",height:"50px"});
-       
-    })
-
-
-    $(function(){
-        $(".product_sort .bd .item").hover(function(){
-            console.log(1);
-            $(this).addClass("layer");
-        },function(){
-            $(this).removeClass("layer");
-        });
-    })
+$('.item').hover(function(){
+    var index = $('.item').index($(this));
+    $('.subitem').eq(index).show();
+    $(this).addClass("layer");
+},function(){
+    var index = $('.item').index($(this));
+    $('.subitem').eq(index).hide();
+    $(this).removeClass("layer");
+})
 
    
 
