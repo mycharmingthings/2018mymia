@@ -1399,7 +1399,24 @@ $width2:1100px;
                     }
                 }
                 .last_li{
-                    border-bottom:1px solid transparent;  
+                    border-bottom:1px solid transparent;   
+                    .item-float  {
+                        position:absolute;
+                        width: 157px;
+                        height: 193px;
+                        right: 197px;
+                        bottom: 63px;
+                        background:pink;
+                        visibility: hidden;
+                        background: url(../img/miaweitr.png) no-repeat;
+                    }
+                    &:hover .item-float {
+                        visibility: visible;
+                        transition:right 1.0s ease;
+                        right:110px;
+                        position:absolute;
+                        
+                    }                        
                 }
             }
         }
