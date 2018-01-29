@@ -1,8 +1,6 @@
 (function($){
     $.noConflict();
     
-    
-    $(document).ready(function(){
         console.log(1)
         $.ajax({
             type:"get",
@@ -179,7 +177,6 @@
  
     })
 
-})(jQuery);
 //淘宝源声明的
  function callback(data) {
             console.log(data) //打印数据获取到了是对象

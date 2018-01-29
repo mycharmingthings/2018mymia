@@ -1,11 +1,11 @@
 //购物车消失
 var goodsId = JSON.parse(getCookie('goods')).id;
-console.log("getCookie('goods')wei"+goodsId);
+// console.log("getCookie('goods')wei"+goodsId);
 (function($){
     $.ajax({
         type:"get",
         url:"php/getGoodsInfo.php",
-        data:{"goodsId":"1004"},
+        data:{"goodsId":JSON.parse(getCookie('goods')).id},
         success:function(data){
             showgoodsInfo(data);
             console.log(data);
