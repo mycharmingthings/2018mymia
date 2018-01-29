@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>购物车页</title>
-    <script src="js/jQuery.js"></script>
-    
+    <title>订单页</title>  
     <link rel="stylesheet" href="dist/shopCart.css">
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
     <script src="js/shopCart.js"></script>
 </head>
 <body>
@@ -45,13 +44,13 @@
 
     <div class="c_wrap w1004" id="shopping_cart">
         <div class="c_title yahei">
-                <span class="myCartTit">我的购物车</span>
+            <div class="myCart_left" ><span class="myCartTit">我的购物车</span></div>
         </div>
         <div class="c_menu">
             <div class="ci ci0 ">
-                <div class='inputwarp nocheck'>
-                    <input class="mckall" type="checkbox" value="0"  data-checktype='0'>
-                            </div>
+                <div class='inputwarp  checked'>
+                    <input id="checkedAllId"  class="mckall" type="checkbox" value="0"  data-checktype='0'>
+                </div>
                 <label>全选</label>
             </div>
             <div class="ci ci1">商品</div>
@@ -61,9 +60,252 @@
             <div class="ci ci5">小计</div>
             <div class="ci ci6">操作</div>
         </div>
+
+       <!-- 购物车店面一 -->
         <div class="c_list store_0" >
+                <div class="cl_con">
+                    <div class="">
+                        <div class="inputwarp nocheck">
+                            <input class="mckall" type="checkbox" value="0" data-checktype='1'>
+                        </div>
+                        <div class="cl_wordsNew">
+                            <span>
+                                蜜芽自营
+                            </span>
+                        </div>
+                    </div>
+                    <!--  haolema -->
+                    <div class="cl_promotion promotion_55207">
+                        <div class="cl_tit cl_tit_Newbg" data-promotion="55207">
+                            <div class="cl_mck inputwarp checked">
+                                <input class="mck" type="checkbox" value="0" data-checktype="2">
+                            </div>
+                            <div data-promotion_type="bargain_price" class="cl_tag disabled">
+                                <span>爆款直降</span>
+                            </div>
+                            <div class="cl_words cl_words_new">
+                                    <!--cl_words box 1-->                                     
+                                    <span class="full_diff_money" style="">最高返25元纸尿裤券</span>
+                                    <a href="https://www.mia.com/promotion-55207.html" target="_blank" class="cd" style="display: none;">去凑单 &gt;</a> 
+                                    <!--cl_words box 1 end-->
+                                    <!--添加券展示信息开始-->                   
+                                    <!--添加券展示信息结束-->
+                                    <div style="display: none;" class="hidden_gift_list_55207">
+                                </div>
+                            </div>
+                            <div class="cl_items promotion ">
+                                <div class="clearfix"></div>
+
+                                <!-- 选购商品开始 -->
+                                <div class="gooditem gooditems_151645115585720  clearfix " >
+                                    <div class="it_mck checked"><input gf="0" name="productcheck" class="mck" data-checktype="3" type="checkbox"  cart-sku="1076458" value="151658400938480"></div>
+                                    <div class="it_img">
+                                        <a href="https://www.mia.com/item-1076458.html" title="新西兰原装 a2 【品牌授权】PLATINUM婴儿奶粉3段12~36M 900g*2罐" target="_blank"> <img src="https://img02.miyabaobei.com/d1/p4/item/10/1076/1076458_normal_1.jpg" alt="新西兰原装 a2 【品牌授权】PLATINUM婴儿奶粉3段12~36M 900g*2罐">
+                                        </a>
+                                    </div>
+                                    <!--  -->
+                                    <div class="it_des">
+                                        <div class="dtz">
+                                                <img alt="" src="img/btntz.png">
+                                        </div>
+                                        <p class="tzname"><a href="https://www.mia.com/item-1076458.html" title="新西兰原装 a2 【品牌授权】PLATINUM婴儿奶粉3段12~36M 900g*2罐" target="_blank"> 新西兰原装 a2 【品牌授权】PLATINUM婴儿奶粉3段12~36M 900g*2罐</a></p> 
+                                        <p class="goods_select">
+                                            <span class="color9">已选:2罐</span>       
+                                        </p>
+                                        <p class="preSale_txt">
+                                        <!--预售商品提示-->
+                                        </p>
+                                    </div>
+                                    <!--  -->
+                                    <div class="it_size"></div>
+                            
+                                    <div class="it_price">
+                                        <p class="goodsp" data-goodsp="459.00">459.00</p>
+                                        <p class="goodmp">578.00</p>
+                                    </div>
+                                    <!--  -->
+                                    <div class="it_num" buy_type="0">
+                                        <div class="dp_bt">
+                                            <span class="dpcom dp_jian" data-fm="cart_home" id="cart_deduct"></span>
+                                            <input autocomplete="off" name="count" type="text" class="dp_num" maxlength="2" value="3" rowid="1076458" warehouse_id="688" readonly="">
+                                            <span class="dpcom dp_jia" id="cart_add" data-fm="cart_home" data-max=""></span> 
+                                            <span class="xiangou pink seckill_limit" style="float:left;display:inline-block;padding-top:8px;line-height:1.5;width: 100%;display:none"></span>
+                                        </div>
+                                        <div class="limit_buy" style="padding-top: 8px;color:#fa4b9b;" ></div>
+                                    <!--  -->
+                                    </div>
+                                    <!--  -->
+                                    <div class="it_total subTotal">
+                                        <span class="item_fee" data-fee="¥1377">
+                                            ¥1377 
+                                        </span>
+                                        <br>
+                                        <span class="tax"></span>
+                                    </div>
+                                    <!--  -->
+                                    <div class="it_operate">
+                                        <p class="sc"><a href="javascript:;" class="delete">删除</a></p>
+                                        <p class="xgyh">  <!--参加的活动--></p>
+                                        <div style="display: none;" class="hidden_promotion_list_151658400938480">
+                                        </div> 
+                                        <p></p>
+                                    </div>
+                                    <div class="line" style="height: 80px;"></div>
+                                    <!--  -->
+                                    <div class="midou_dikou">
+                                        <div class="midou_dikou_m">
+                                            <span class="mid_max" style="display:none;">1866</span><!--PHP输出 最多可抵扣的数量-->
+                                                <p class="tp1"><span class="ts1">蜜豆抵扣</span>可用<span class="mid_mid">150</span>蜜豆抵扣<span class="mid_rmb">3</span>元</p>
+                                            <span class="midou_btn" data-isu="0">使用抵扣</span>
+                                        </div>
+                                    </div>
+                                    <!--  -->
+                                </div>
+
+                                
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                </div>
+               
+        </div> 
+        <!-- 购物车店面结束 -->
+        <!-- 购物车店面二 -->
+        <div class="c_list store_0" >
+            <div class="cl_con">
+                <div class="">
+                    <div class="inputwarp nocheck">
+                        <input class="mckall" type="checkbox" value="0" data-checktype='1'>
+                    </div>
+                    <div class="cl_wordsNew">
+                        <span>
+                            Huggies好奇官方旗舰店
+                        </span>
+                    </div>
+                </div>
+                <!--  haolema -->
+                <div class="cl_promotion promotion_55207">
+                    <div class="cl_tit cl_tit_Newbg" data-promotion="55207">
+                        <div class="cl_mck inputwarp checked">
+                            <input class="mck" type="checkbox" value="0" data-checktype="2">
+                        </div>
+                        <div data-promotion_type="bargain_price" class="cl_tag disabled">
+                            <span>爆款直降</span>
+                        </div>
+                        <div class="cl_words cl_words_new">
+                                <!--cl_words box 1-->                                     
+                                <span class="full_diff_money" style="">最高返25元纸尿裤券</span>
+                                <a href="https://www.mia.com/promotion-55207.html" target="_blank" class="cd" style="display: none;">去凑单 &gt;</a> 
+                                <!--cl_words box 1 end-->
+                                <!--添加券展示信息开始-->                   
+                                <!--添加券展示信息结束-->
+                                <div style="display: none;" class="hidden_gift_list_55207">
+                            </div>
+                        </div>
+                        <div class="cl_items promotion ">
+                            <div class="clearfix"></div>
+
+                            <!-- 选购商品开始 -->
+                            <div class="gooditem gooditems_151645115585720  clearfix " >
+                                <div class="it_mck checked"><input gf="0" name="productcheck" class="mck" data-checktype="3" type="checkbox"  cart-sku="1076458" value="151658400938480"></div>
+                                <div class="it_img">
+                                    <a href="https://www.mia.com/item-1076458.html" title="新西兰原装 a2 【品牌授权】PLATINUM婴儿奶粉3段12~36M 900g*2罐" target="_blank"> <img src="https://img02.miyabaobei.com/d1/p4/item/10/1076/1076458_normal_1.jpg" alt="新西兰原装 a2 【品牌授权】PLATINUM婴儿奶粉3段12~36M 900g*2罐">
+                                    </a>
+                                </div>
+                                <!--  -->
+                                <div class="it_des">
+                                    <div class="dtz">
+                                            <img alt="" src="img/btntz.png">
+                                    </div>
+                                    <p class="tzname"><a href="https://www.mia.com/item-1076458.html" title="新西兰原装 a2 【品牌授权】PLATINUM婴儿奶粉3段12~36M 900g*2罐" target="_blank"> 新西兰原装 a2 【品牌授权】PLATINUM婴儿奶粉3段12~36M 900g*2罐</a></p> 
+                                    <p class="goods_select">
+                                        <span class="color9">已选:2罐</span>       
+                                    </p>
+                                    <p class="preSale_txt">
+                                    <!--预售商品提示-->
+                                    </p>
+                                </div>
+                                <!--  -->
+                                <div class="it_size"></div>
+                        
+                                <div class="it_price">
+                                    <p class="goodsp" data-goodsp="459.00">359.00</p>
+                                    <p class="goodmp">478.00</p>
+                                </div>
+                                <!--  -->
+                                <div class="it_num" buy_type="0">
+                                    <div class="dp_bt">
+                                        <span class="dpcom dp_jian" data-fm="cart_home" id="cart_deduct"></span>
+                                        <input autocomplete="off" name="count" type="text" class="dp_num" maxlength="2" value="4" rowid="1076458" warehouse_id="688" readonly="">
+                                        <span class="dpcom dp_jia" id="cart_add" data-fm="cart_home" data-max=""></span> 
+                                        <span class="xiangou pink seckill_limit" style="float:left;display:inline-block;padding-top:8px;line-height:1.5;width: 100%;display:none"></span>
+                                    </div>
+                                    <div class="limit_buy" style="padding-top: 8px;color:#fa4b9b;" ></div>
+                                <!--  -->
+                                </div>
+                                <!--  -->
+                                <div class="it_total subTotal">
+                                    <span class="item_fee" data-fee="¥1377">
+                                        ¥1177 
+                                    </span>
+                                    <br>
+                                    <span class="tax"></span>
+                                </div>
+                                <!--  -->
+                                <div class="it_operate">
+                                    <p class="sc"><a href="javascript:;" class="delete">删除</a></p>
+                                    <p class="xgyh">  <!--参加的活动--></p>
+                                    <div style="display: none;" class="hidden_promotion_list_151658400938480">
+                                    </div> 
+                                    <p></p>
+                                </div>
+                                <div class="line" style="height: 80px;"></div>
+                                <!--  -->
+                                <div class="midou_dikou">
+                                    <div class="midou_dikou_m">
+                                        <span class="mid_max" style="display:none;">1866</span><!--PHP输出 最多可抵扣的数量-->
+                                            <p class="tp1"><span class="ts1">蜜豆抵扣</span>可用<span class="mid_mid">150</span>蜜豆抵扣<span class="mid_rmb">3</span>元</p>
+                                        <span class="midou_btn" data-isu="0">使用抵扣</span>
+                                    </div>
+                                </div>
+                                <!--  -->
+                            </div>                          
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+            </div>
+           
+        </div> 
+        <!-- 购物车店面二结束 -->
+        <div class="clearfix"></div>
             
-        </div>   
+        <!-- 去结账 -->
+        <div class="c_countn cashier_part" id="cashier_part">
+            <div class="funcs">
+            <div class="inputwarp checked"><input id="btnUnCheckId"  class="mckall" type="checkbox" value="0" id="mckall" data-checktype="0"></div>
+                <label>反选</label>
+                <a href="javascript:;" id="removeAll" class="removeAll">删除选择商品</a>
+                <a href="javascript:;" class="removeFail">清除无效商品</a>
+                <a href="javascript:;" id="batchAddMine" class="batchAddMine">移入收藏夹</a>
+            </div>
+            <div class="newCart">
+                <div class="ze" style="margin-top: 15px;"> 
+                    <span>已选择商品 <label class="newCart_select_quantity">4</label> 件</span> <span>合计（不含运费和进口税）： <label class="newCart_settle_amount">￥1935</label></span>
+                </div>
+                            <div class="yh">
+                    <span class="bracket" style="display: none;"></span>
+                    <span class="thrift_price" style="display:none;">已减：￥</span>
+                    <span class="dot" style="display: none;">，</span>
+                    <span class="taxes_price" style="display:none;">：￥</span>
+                    <span class="bracket" style="display: none;"></span>
+                </div>
+            </div>
+            <a class="newCart_jies btnJieSuan">去结算</a>
+        </div>
+        <!-- 去结账 -->
     </div>
 </div>
 
@@ -219,6 +461,7 @@
                         <a href="/cart"><img src="img/sidebar_3.jpg">
                             <span>微信</span>
                         </a>
+                        <div class="item-float item-app"></div>
                 </li>
             </ul>
         </div>

@@ -2,13 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
     <title>首页蜜芽-母婴限时特卖商城-进口奶粉,纸尿裤,辅食,童装-100%正品、安全放心!</title>
     <script src="js/jQuery.js"></script>
-    
     <link rel="stylesheet" href="dist/index.css">
-    <!-- <link rel="stylesheet" href="dist/iconfont.css"> -->
-    <!-- <link rel="icon" type="img/favicon.ico" href="img/miaheader.jpg"> -->
     <script src="js/index.js"></script>
+    <script src="js/cookie.js"></script>
 </head>
 <body>
 <!-- 模态窗口 -->
@@ -35,14 +37,14 @@
         <div class="header-topbar">
             <div class="tobar">
                 <div class="left">
-                    <a href="https://www.mia.com/app.html" target="_blank" title="手机蜜芽" class="m">
+                    <a href="phonemia.html" target="_blank" title="手机蜜芽" class="m">
                         <i class="mia-icon icon-mobile">&#xe800;</i>
                         手机蜜芽
                     </a>
                 </div>
                 <div class="right">
                         <span class="welcome">你好，欢迎来到蜜芽！</span>
-                        <a href="https://www.mia.com/login?url=https%3A%2F%2Fwww.mia.com%2F" title="点击登录" rel="nofollow">登录</a><span>|</span><a href="https://www.mia.com/register?url=https%3A%2F%2Fwww.mia.com%2F" title="点击注册" rel="nofollow">免费注册</a><a href="https://www.mia.com/help.html" target="_blank">帮助中心</a>
+                        <a href="load.html" title="点击登录" rel="nofollow">登录</a><span>|</span><a href="registerMySQL.html" title="点击注册" rel="nofollow">免费注册</a><a href="helpcenter.html" target="_blank">帮助中心</a>
                 </div>
             </div>          
         </div> 
@@ -62,23 +64,27 @@
                         <ul id="search-list">
                         </ul>                        
                     </div> 
+                   
+                   
+                   
                     <div class="shoppingcart">               
                         <div class="func-cart" id="cart_num_box">
-                                <a class="cart-item" href="javascript:;">
-                                    <span class="shopping"><i class="iconfont icon-101"></i></span> 
+                                <a class="cart-item" href="shopCart.html">
+                                    <span class="shopping"> </span> 
                                     <span class="shopping2">  购物车 </span>                               
                                 </a>                                                   
                         </div>                 
                         <div class="emptybox"></div>
                         <div class="cart-more" id="shop_cart">
-                        <p class="empty">购物车还没有商品，快去选购吧！</p>
+                            <p class="empty">购物车还没有商品，快去选购吧！</p>
                         </div> 
-                        <div class="emempoty"></div> 
+                        <div class="emempoty">  </div> 
                     </div>   
                 </div>          
             </div>          
         </div>
-       
+
+        
        
         <div class="header-nav"> 
             <div class="nav">
@@ -2392,12 +2398,12 @@
         <div class="list">
             <ul>
                 <li class="">
-                    <a href="/cart"><img src="img/sidebar_1.jpg">
+                    <a href="shopCart.html"><img src="img/sidebar_1.jpg">
                         <span>购物车</span>
                     </a>
                 </li>
                 <li class="">
-                        <a href="/cart"><img src="img/sidebar_2.jpg">
+                        <a href="phonemia.html"><img src="img/sidebar_2.jpg">
                             <span>资讯</span>
                         </a>
                 </li>
@@ -2405,6 +2411,7 @@
                         <a href="/cart"><img src="img/sidebar_3.jpg">
                             <span>微信</span>
                         </a>
+                        <div class="item-float item-app"></div>
                 </li>
             </ul>
         </div>

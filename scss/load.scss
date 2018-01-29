@@ -4,8 +4,7 @@ body{
 }
 .bodybox{
     width:100%;
-    height:100%;
-    
+    height:100%; 
     .top{
         position:relative;
         padding-top: 75px;
@@ -52,119 +51,148 @@ body{
         .content{
             position: absolute;
             left: 610px;
-            top: 92px;
+            top: 145px;
             width: 304px;
-            height:290px;
-            box-shadow: 0 0 4px rgba(0,0,0,.075);
-            padding: 0 20px 20px 20px;
+            height: 290px;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.075);
+            padding: 0 20px 20px 20px; 
             .loadtit{
-                width:304px;
-                height:60px;
+                width: 304px;
+                height: 60px;
                 line-height: 60px;
-                font-family: \5FAE\8F6F\96C5\9ED1;
+                font-family: \5FAE\8F6F\96C5\9ED1; 
                 .l{
-                    float:left;
+                    float: left;
                     font-size: 20px;
-                    color: #f450a2;
+                    color: #f450a2; 
                 }
                 .r{
-                    width:210px;
-                    height:60px;
-                    float:right;
+                    width: 210px;
+                    height: 60px;
+                    float: right;
                     font-size: 12px;
                     color: #f450a2;
-                    display:block;
-                    position:relative;
+                    display: block;
+                    position: relative; 
                     i{
-                        font-style:normal;
-                        display:inline-block;
-                        text-indent:40px;
+                        font-style: normal;
+                        display: inline-block;
+                        text-indent: 40px;
                     }
                     .r_a{
-                        background-image:none;
+                        background-image: none;
                         width: 60px;
-                        height:50px;
-                        position:absolute;
-                        right:0;
-                        top:0;
-                        color: #666;
+                        height: 50px;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        color: #666; 
                      }
                 }
             }
             .load_c{                
-                width:304px;
-                height:156px;
+                width: 304px;
+                height: 156px;
                 .ph_number{
-                    clear:both;
-                    width:304px;
-                    height:37px;
-                    border:1px solid #eee;
-                    box-shadow: 0 0 2px 1px rgba(207,207,207,.4) inset;
+                    clear: both;
+                    width: 304px;
+                    height: 37px;
+                    border: 1px solid #CFCFCF;
+                    box-shadow: 0 0 2px 1px rgba(207,207,207,.4) inset; 
+                    margin-bottom:20px;
+                    position:relative;
                     .ph_input{
-                        display:block;
-                        float:left;
-                        width:170px;
-                        height:34px;
-                        border:none;
+                        display: block;
+                        float: left;
+                        width: 200px;
+                        height: 34px;
+                        border: none; 
+                        outline:none;
                     }
                     .ph_img{ 
-                        float:left;                    
-                        width:54px;
-                        height:37px;
-                        background: url(../img/load_5.jpg) no-repeat center center;
+                        float: left;
+                        width: 54px;
+                        height: 37px;
+                        background: url(../img/load_5.jpg) no-repeat center center; 
                     }             
                 }
                 .phone_code{
-                    position:relative;
-                     width:306px;
-                     height:42px;  
-                     line-height:42px;
-                     margin-top:px;               
+                    position: relative;
+                    width: 306px;
+                    height: 42px;
+                    line-height: 42px;
+                    margin-top: 0px;              
                     .ph_code{
-                        width:130px;
-                        height:42px;
+                        width: 130px;
+                        height: 38px;
                         outline: none;
-                        text-indent:20px; 
-                        border:1px solid #eee;
-                        box-shadow: 0 0 2px 1px rgba(207,207,207,.4) inset;
+                        text-indent: 20px;
+                        border: 1px solid #CFCFCF;
+                        box-shadow: 0 0 2px 1px rgba(207, 207, 207, 0.4) inset; 
                     }
                     .phaaa{
-                        position:absolute;
-                        top:0;
-                        right:0;
-                        border:1px solid #eee;
-                        box-shadow: 0 0 2px 1px rgba(207,207,207,.4) inset;
-                        display:block;
-                        width:130px;
-                        height:41px;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        border: 1px solid #CFCFCF;
+                        box-shadow: 0 0 2px 1px rgba(207, 207, 207, 0.4) inset;
+                        display: block;
+                        width: 130px;
+                        height: 38px;
                         font-weight: 700;
                         color: #666;
-                        text-indent:20px;
+                        text-indent: 20px; 
                     }                  
                 }
                 .load_btn{
-                    margin-top:20px;
-                    width:255px;
-                    height:42px;
-                    text-align:center;
-                    background:#fb3791;
-                    line-height:42px;
-                    a{
-                        width:258px;
-                        height:42px;
-                        color:white;
-                        font-size:20px;
-                    }
+                    height: 42px;
+                    text-align: center;
+                    background: #fb3791;
+                    line-height: 42px;
+                    width: 258px;
+                    font-weight:700;
+                    outline: none;
+                    font-size: 20px;
+                    color: white;
                 }
             }
         }
         .loadfooter{
             color: #666;
-            width:255px;
-            padding-top:10px;
-            line-height:20px;
-            height:20px; 
-            background:pink;
+            width: 255px;
+            padding-top: 10px;
+            line-height: 20px;
+            height: 20px;
+            margin-top:20px;
+            p{
+                height:30px;
+                line-height:30px;
+                -webkit-margin-before: 0em;
+                -webkit-margin-after: 0em;
+                -webkit-margin-start: 0px;
+                -webkit-margin-end: 0px;
+            }
+            .p {
+                span{
+                    display:block;
+                    margin-top:5px;
+                    float:left;
+                }
+                a{
+                    display:inline-block;
+                    width:30px;
+                    height:30px;
+                    margin-bottom:0;
+                    float:left;
+                }
+                .login_wx{
+                    background: url(../img/login_wx.jpg) no-repeat center center;
+                 
+                }
+                .login_sina {
+                    background: url(../img/login_sina.jpg) no-repeat center center; 
+                 }
+            }
         }
     }
     .bottom{
@@ -174,6 +202,27 @@ body{
         line-height: 22px;
         color: #ccc;
         font-size: 12px;
-        font-family: Verdana,Geneva,sans-serif;
+        font-family: Verdana,Geneva,sans-serif; 
     }
+}
+.errMsg{
+    display:none;
+    width:300px;
+    border: 1px solid #ffbdbf;
+    background: #ffebec;
+    color: #E42626;
+    padding: 2px 0 2px 3px;
+    line-height: 20px;
+  }
+.usernameMsgs{
+    display:none;
+    overflow: hidden;
+    height: 20px;
+    top: 10px;
+    width: 300px;
+    border: 1px solid #ffbdbf;
+    background: #ffebec;
+    color: #E42626;
+    padding: 2px 0 2px 3px;
+    line-height: 20px;
 }

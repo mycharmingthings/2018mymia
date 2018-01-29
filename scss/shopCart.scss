@@ -115,12 +115,20 @@ $width2:1100px;
     padding: 10px 0px;
     margin-left: 10px;
     margin-right: 10px;
-    span {
+    .myCart_left{
+        clear: both;
+        width:120px;
+        height:30px;
+        overflow:hidden;
         border-bottom: 2px solid #fa4b9b;
-        padding-bottom: 10px;
-        padding-right: 10px;
-        color: #333;
-    }
+        text-align: center;
+        span {
+            border-bottom: 2px solid #fa4b9b;
+            padding-bottom: 10px;
+            padding-right: 10px;
+            color: #333;
+        }
+    }   
 }
 .yahei {
     font-family: \5FAE\8F6F\96C5\9ED1;
@@ -129,9 +137,34 @@ $width2:1100px;
     overflow: hidden;
     background: #fff;
     padding: 15px;
+    height:20px;
     .ci {
         text-align: center;
         padding: 2px 0;
+        height:22px;
+        
+        .inputwarp{
+            background: url(../img/arrowRed.png) no-repeat 0 263px;
+            background-repeat: repeat-y;
+            width: 23px;
+            height: 22px;
+            display: inline-block;
+            position: relative;
+            left: -4px;
+            top:-3px;
+            .mckall{
+                // opacity: 0;
+                vertical-align: middle;
+                margin-bottom: 0;
+                margin-right: 5px;  
+                width: 100%;
+                height: 80%;     
+                line-height: normal;
+                outline: 0;
+                font-size: 12px;
+                font-family: inherit;  
+            }
+        }
     }
     div {
         float: left;
@@ -192,22 +225,24 @@ $width2:1100px;
     
     overflow: inherit;
     background: #fff;
-    padding: 0 15px;
-    border: 1px solid #ededed; 
+    padding: 0 12px;
     .cl_con {
-        height:400px;
+        height:auto;
+        margin:10px 0;
         margin-bottom: 0px; 
+        border: 1px solid #ededed; 
         .cl_promotion{
             .cl_tit{
                 .cl_mck {
                     .mck{
-                        opacity: 0;
+                        // opacity: 0;
                         vertical-align: middle;
                         margin-bottom: 0;
                         margin-right: 5px;
                         width: 100%;
-                        height: 80%;
+                        // height: 80%;
                         line-height: normal;
+                        height:20px;
                         outline: 0;
                         font-size: 12px;
                         font-family: inherit;
@@ -263,12 +298,12 @@ $width2:1100px;
                             background: url(../img/arrowRed.png)  repeat-y 0 42px;;
                             width: 20px;
                             .mck{
-                                opacity: 0;
+                                // opacity: 0;
                                 vertical-align: middle;
                                 margin-bottom: 0;
                                 margin-right: 5px;
                                 width: 100%;
-                                height: 80%;
+                                // height: 80%;
                                 line-height: normal;
                                 outline: 0;
                                 font-size: 12px;
@@ -456,8 +491,10 @@ $width2:1100px;
             padding-bottom: 2px;
         }
     }
-    .inputwarp {
+    .checked{
         background-position: 0 -176px;
+    }
+    .inputwarp { 
         background: url(../img/arrowRed.png) no-repeat 0 263px;
         background-repeat: repeat-y;
         width: 23px;
@@ -466,7 +503,7 @@ $width2:1100px;
         position: relative;
         left: 2px;
         .mckall{
-            opacity: 0;
+            // opacity: 0;
             vertical-align: middle;
             margin-bottom: 0;
             margin-right: 5px;  
@@ -479,6 +516,7 @@ $width2:1100px;
         }
     }
     .cl_wordsNew{
+        display:inline-block;
         clear:right;
         margin-left: 5px;
         margin-top: 4px!important;
@@ -488,6 +526,7 @@ $width2:1100px;
     }
     .cl_tit_Newbg{
         padding-right:20px;
+        overflow:hidden;
     }
 }
 .clearfix:after{
@@ -522,7 +561,7 @@ $width2:1100px;
             position: relative;
             top: 16px;
             .mckall{
-                opacity: 0;
+                // opacity: 0;
                 vertical-align: middle;
                 margin-bottom: 0;
                 margin-right: 5px;
@@ -532,6 +571,7 @@ $width2:1100px;
                 outline: 0;
                 font-size: 12px;
                 font-family: inherit;
+                display: block;
             }
         }
         label {
@@ -809,7 +849,24 @@ $width2:1100px;
                     }
                 }
                 .last_li{
-                    border-bottom:1px solid transparent;  
+                    border-bottom:1px solid transparent;   
+                    .item-float  {
+                        position:absolute;
+                        width: 157px;
+                        height: 193px;
+                        right: 197px;
+                        bottom: 63px;
+                        background:pink;
+                        visibility: hidden;
+                        background: url(../img/miaweitr.png) no-repeat;
+                    }
+                    &:hover .item-float {
+                        visibility: visible;
+                        transition:right 1.0s ease;
+                        right:110px;
+                        position:absolute;
+                        
+                    }                        
                 }
             }
         }

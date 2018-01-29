@@ -27,49 +27,74 @@
    
 
 
-    //侧边栏选项卡
-    let sideAllGood = $(".htmleaf-container .product_sort .hd");
-    let sideDispear = $(".htmleaf-container .product_sort .bd");
-    let sideFather = $(".htmleaf-container .product_sort");
-    
-    sideAllGood.bind('mouseenter',function(){             
-        sideDispear.css('display','block');  
-        sideFather.css('background','white');       
-    }) 
+    // //树形菜单
+    // $('.clix').click(function(){
+    //     var $this = $(this);
+    //     var zt = $this.children("span").attr('class');
+    //     if(zt == "fold"){
+    //         $this.children("span").addClass('unfold');
+    //         $this.children("a").addClass('blod');
+    //     }else{
+    //         $this.children("span").removeClass('unfold');
+    //         $this.children("a").removeClass('blod');
+    //     }
+    //     $this.next("ul").slideToggle();
+    // });
 
-    sideAllGood.bind('mouseleave',function(){
-
-            sideDispear.css('display','none');
-            sideFather.css('background','none');  
-            // sideFather.css({overflow:"hidden",height:"50px"});
-       
-    })
-
-
-    $(function(){
-        $(".product_sort .bd .item").hover(function(){
-            console.log(1);
-            $(this).addClass("layer");
-        },function(){
-            $(this).removeClass("layer");
-        });
-    })
-
-   //树形菜单
+   
+   
+    //树形菜单
        $('.clix').click(function(){
-           var $this = $(this);
-           var zt = $this.children("span").attr('class');
-           if(zt == "fold"){
-               $this.children("span").addClass('unfold');
-               $this.children("a").addClass('blod');
-           }else{
-               $this.children("span").removeClass('unfold');
-               $this.children("a").removeClass('blod');
-           }
-           $this.next("ul").slideToggle();
-       });
+        var $this = $(this);
+        var zt = $this.children("span").attr('class');
+        if(zt == "fold"){
+            $this.children("span").addClass('unfold');
+            $this.children("a").addClass('blod');
+        }else{
+            $this.children("span").removeClass('unfold');
+            $this.children("a").removeClass('blod');
+        }
+        $this.next("ul").slideToggle();
+    });
 
- 
+
+
+
+
+
+    //侧边栏选项卡
+        // $(function(){
+        //     $(".product_sort .hd .bd .item").hover(function(){
+        //         console.log(1);
+        //         $(this).addClass("layer");
+        //     },function(){
+        //         $(this).removeClass("layer");
+        //     });
+        // })
+
+    $('.hd').mouseover(function(){
+        $('.bd').show();
+    })
+   
+    $('.hd').mouseout(function(){
+        $('.bd').hide();
+    })
+
+   
+    $('.item').hover(function(){
+        let index = $('.item').index($(this));
+        $('.subitem').eq(index).show();
+        $(this).addClass("layer");
+    },function(){
+        let index = $('.item').index($(this));
+        $('.subitem').eq(index).hide();
+        $(this).removeClass("layer");
+    })
+
+
+    
+
+
     //桌面两边的移动出现框
     var navOffset=$(".header-nav").offset().top;
     $(window).scroll(function(){  

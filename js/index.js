@@ -1,190 +1,168 @@
 (function($){
     $.noConflict();
-    // //模态窗口 jQuery有问题，底下用原声做出来了
-    // var  oRegistA = $('registA');
-    // var  oRegistB = $('registB');
-    // var  oMask    = $('mask');
-    // var  oRegisterCimg    = document.getElementsByClassName('registerCimg');
-    // var  oImmidate_register    = $('immidate_register');
-    //    oRegistB.on('click', function () {
-    //    console.log(1);
-    //    oMask.style.display = 'none';
-    //    oRegisterCimg.style.display = 'none';
-    //    oImmidate_register.style.display = 'none';     		
-    // });
+
     
-    
-    //购物车消失
+   
     $(document).ready(function(){
+       //读取cookie
+        getCookie('vip');
        
+
+        //购物车消失
         $('.shoppingcart').bind('mouseover', function(){
             $('.cart-more').css('display','block');
+            $('.func-cart').addClass('change-cart');
             $('.emptybox').css('display','block');
             $('.emempoty').css('display','block');
-       });
-      $('.shoppingcart').bind('mouseleave', function(){
-            $('.cart-more').css('display','none');
-            $('.emptybox').css('display','none');
-            $('.emempoty').css('display','block');
-      });
-
-    
-    //正品保证clearInterval(iTimer);
-    $('.promise').bind('mouseenter',function(){             
-            $('.choice').css('display','block');           
-    }) 
-    $('.promise').bind('mouseleave',function(){
-        var iTimer=setInterval(function(){ 
-            $('.choice').css('display','none');
-      },3000)  
-    })
-   
-    //选项卡
-    // $('.header .header-nav .nav .menus .dlsone .dl').bind('mouseenter',function(){
-    //     let iIndex = $(this).index();
-    //      $('.header .header-nav .nav .menus .gooddds').css('display', 'block');
-    // })
-    // $('.dlsone .dl').bind('mouseleave',function(){
-    //     let iIndex = $(this).index();
-    //     $('.header .header-nav .nav .menus .gooddds').css('display', 'none');       
-    // })
-
-    $(function(){
-        $(".product_sort .bd .item").hover(function(){
-            console.log(1);
-            $(this).addClass("layer");
-        },function(){
-            $(this).removeClass("layer");
+            $(".shopping2").css({"border":"1px solid transparent"})
         });
-    })
+        $('.shoppingcart').bind('mouseleave', function(){
+            $('.cart-more').css('display','none');
+            $('.func-cart').removeClass('change-cart');
+            $('.emptybox').css('display','none');
+            $('.emempoty').css('display','none');
+            $(".shopping2").css({"border":"1px solid #eee"});
+        });
+
+        
+        // //正品保证clearInterval(iTimer);
+        // $('.promise').bind('mouseenter',function(){             
+        //         $('.choice').css('display','block');           
+        // }) 
+        // $('.promise').bind('mouseleave',function(){
+        //     var iTimer=setInterval(function(){ 
+        //         $('.choice').css('display','none');
+        // },3000)  
+        // })
+    
+        //选项卡
+        // $('.header .header-nav .nav .menus .dlsone .dl').bind('mouseenter',function(){
+        //     let iIndex = $(this).index();
+        //      $('.header .header-nav .nav .menus .gooddds').css('display', 'block');
+        // })
+        // $('.dlsone .dl').bind('mouseleave',function(){
+        //     let iIndex = $(this).index();
+        //     $('.header .header-nav .nav .menus .gooddds').css('display', 'none');       
+        // })
+
+        $(function(){
+            $(".product_sort .bd .item").hover(function(){
+                console.log(1);
+                $(this).addClass("layer");
+            },function(){
+                $(this).removeClass("layer");
+            });
+        })
 
 
 
 
 
-    //轮播图
-    var arr=["mai_nav_4.jpg","mai_nav_4.jpg","mai_nav_4.jpg","mai_nav_4.jpg"];
-    var ord = 0;//代表当前图片的序号，从0开始。
-    var myTimer = null;
+        //轮播图
+        var arr=["mai_nav_4.jpg","mai_nav_4.jpg","mai_nav_4.jpg","mai_nav_4.jpg"];
+        var ord = 0;//代表当前图片的序号，从0开始。
+        var myTimer = null;
 
-    function  initUI() {
-        $("#box li:first").css({"backgroundColor":"#f92c86"});
+        function  initUI() {
+            $("#box li:first").css({"backgroundColor":"#f92c86"});
+            }
+
+            function  initEvent() {
+            $("#box").mouseenter(function () {
+                stopPlay();
+            });
+
+            $("#box").mouseleave(function () {
+                autoPlay();
+            });
+
+            $("#box li").click(function () {
+                goImg($("#box li").index(this));
+            });
+
+            $("#leftArrow").click(function () {
+                let transord =ord-1;
+                transord = transord<0?arr.length-1:transord;
+                goImg(transord);
+            });
+
+            $("#rightArrow").click(function () {
+                let transord =ord+1;
+                transord = transord>arr.length-1?0:transord;
+                goImg(transord);
+            });
+        }
+        function autoPlay() {
+            myTimer = setInterval(function () {
+                //一、改变数据
+                // 1、记录当前序号（淡出的图片序号）
+                let outOrd = ord;
+                //2、改变要显示的图片的序号（淡出图片序号加一）
+                ord++;
+                if(ord>arr.length-1){
+                    ord=0;
+                }
+                //二、改变外观
+                let $img = $("#box img");
+                //1、淡入淡出效果
+                //让一张(outOrd)淡出 当前消失
+                $img.eq(outOrd).animate({"opacity":0},800);
+                //让一张(ord)淡入下一张图片显示
+                $img.eq(ord).animate({"opacity":1},800);
+                //2、改变豆豆的颜色；
+                $("#box li").eq(ord).css({"backgroundColor":"#f92c86"}).siblings().css({"backgroundColor":"white"});
+            },3000);
         }
 
-        function  initEvent() {
-        $("#box").mouseenter(function () {
-            stopPlay();
-        });
 
-        $("#box").mouseleave(function () {
+        //2、停止播放
+        function stopPlay() {
+            window.clearInterval(myTimer);
+        }
+
+        //3、跳转到指定的图片
+        function  goImg(transOrd) {
+            //一、改变数据
+            // 1、记录当前序号（淡出的图片序号）
+            let outOrd = ord;
+            //2、改变要显示的图片的序号（传入的图片序号）
+            ord=transOrd;
+            if(ord>arr.length-1){
+                ord=0;
+            }
+            //二、改变外观
+            let $img = $("#box img");
+            //1、淡入淡出效果
+            //让一张(outOrd)淡出 当前消失
+            $img.eq(outOrd).animate({"opacity":0},800);
+            //让一张(ord)淡入下一张图片显示
+            $img.eq(ord).animate({"opacity":1},800);
+            //2、改变豆豆的颜色；
+            $("#box li").eq(ord).css({"backgroundColor":"#f92c86"}).siblings().css({"backgroundColor":"white"});
+        }
+
+        $(function () {
+            //1、初始化界面
+            initUI();
+            //2、绑定事件
+            initEvent();
+            //3、自动播放
             autoPlay();
         });
 
-        $("#box li").click(function () {
-            goImg($("#box li").index(this));
-        });
-
-        $("#leftArrow").click(function () {
-            let transord =ord-1;
-            transord = transord<0?arr.length-1:transord;
-            goImg(transord);
-        });
-
-        $("#rightArrow").click(function () {
-            let transord =ord+1;
-            transord = transord>arr.length-1?0:transord;
-            goImg(transord);
-        });
-    }
-function autoPlay() {
-    myTimer = setInterval(function () {
-        //一、改变数据
-        // 1、记录当前序号（淡出的图片序号）
-        let outOrd = ord;
-        //2、改变要显示的图片的序号（淡出图片序号加一）
-        ord++;
-        if(ord>arr.length-1){
-            ord=0;
-        }
-        //二、改变外观
-        let $img = $("#box img");
-        //1、淡入淡出效果
-        //让一张(outOrd)淡出 当前消失
-        $img.eq(outOrd).animate({"opacity":0},800);
-        //让一张(ord)淡入下一张图片显示
-        $img.eq(ord).animate({"opacity":1},800);
-        //2、改变豆豆的颜色；
-        $("#box li").eq(ord).css({"backgroundColor":"#f92c86"}).siblings().css({"backgroundColor":"white"});
-    },3000);
-}
-
-
-//2、停止播放
-function stopPlay() {
-    window.clearInterval(myTimer);
-}
-
-//3、跳转到指定的图片
-function  goImg(transOrd) {
-    //一、改变数据
-    // 1、记录当前序号（淡出的图片序号）
-    let outOrd = ord;
-    //2、改变要显示的图片的序号（传入的图片序号）
-    ord=transOrd;
-    if(ord>arr.length-1){
-        ord=0;
-    }
-    //二、改变外观
-    let $img = $("#box img");
-    //1、淡入淡出效果
-    //让一张(outOrd)淡出 当前消失
-    $img.eq(outOrd).animate({"opacity":0},800);
-    //让一张(ord)淡入下一张图片显示
-    $img.eq(ord).animate({"opacity":1},800);
-    //2、改变豆豆的颜色；
-    $("#box li").eq(ord).css({"backgroundColor":"#f92c86"}).siblings().css({"backgroundColor":"white"});
-}
-
-$(function () {
-    //1、初始化界面
-    initUI();
-    //2、绑定事件
-    initEvent();
-    //3、自动播放
-    autoPlay();
-});
-
-
-
-
-
-    // function lunbotu(){  
-    //     $(".picBox").animate({margintop:"-600px" },4000,"linear",function(){  
-    //         $(this).css({margintop:"0px"});  
-    //         $(this).children("li").first().remove().clone(true).appendTo(".picBox");  
-    //     });  
-    // }  
-    // var startRollOne=setInterval(lunbotu,3000);  
-    // $(".carousel").hover(function () {  
-    //     clearInterval(startRollOne);  
-    // }, function () {  
-    //     startRollOne=setInterval(lunbotu,3000);  
-    // });
-
-
    
    
-    //侧边栏
-    var navOffset=$(".header-nav").offset().top;
-    $(window).scroll(function(){  
-        scrollPos=$(window).scrollTop(); 
-        // console.log(navOffset); 
-        if(scrollPos >=navOffset){  
-            $('.sidebar').css('display', 'block'); 
-        }else{  
-            $('.sidebar').css('display', 'none');  
-        }  
-    });
+        //侧边栏
+        var navOffset=$(".header-nav").offset().top;
+        $(window).scroll(function(){  
+            scrollPos=$(window).scrollTop(); 
+            // console.log(navOffset); 
+            if(scrollPos >=navOffset){  
+                $('.sidebar').css('display', 'block'); 
+            }else{  
+                $('.sidebar').css('display', 'none');  
+            }  
+        });
 
     //...................................判断吸顶效果........................
     // var navOffset=$(".selection-five").offset().top; 

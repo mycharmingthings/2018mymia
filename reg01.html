@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="post" action="php/regsave.php" id="f">
+        用户名：<input id="txtusername" name="username" type="text"  >
+        <span id="usernameMsg"></span><br/>
+        密码：<input name="userpass" type="password" ><br/>
+        <input  type="submit" value="注册" />
+    </form>
+</body>
+</html>
+
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+    //用户名是否存在
+var usernameExists = true;
+$(function () {
+    //用户名存在性验证
+    $("#txtusername").blur(function () {
+            $.ajax({
+                url:"php/usercheck.php",
+                method:"get",
+                data:{"username":$("#txtusername").val()},
+                success:function (data) {
+                    if(data=="0"){
+                        usernameExists = false;
+                        $("#usernameMsg").html("该用户名可用");
+                    }else{
+                        usernameExists = true;
+                        $("#usernameMsg").html("该用户名已存在");
+                    }
+                }
+            });
+        });
+
+    $("#f").submit(function () {
+        if(usernameExists){
+            // alert("亲，用户名已经存在");
+            locatin.href="index.html";
+            return false;//阻止浏览器的默认行为。
+        }
+    });
+});
+
+</script>
