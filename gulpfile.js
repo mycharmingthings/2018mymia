@@ -18,13 +18,12 @@ var  minify = require("gulp-babel-minify");
 
 gulp.task("minify", function(){
 gulp.src("js/*.js")
-/*
-  .pipe(minify({
-    mangle: {
-      keepClassName: true
+
+   .pipe(minify({
+     mangle: {
+       keepClassName: true
     }
-  }))
-  */
+   }))
   .pipe(gulp.dest("D:\\phpStudy\\WWW\\gulpmiaTest\\dist\\js"));
 });
 
@@ -62,6 +61,17 @@ gulp.task("copy-js",function () {
 gulp.task("copy-php",function () {
     //复制文件
     gulp.src("php/*.php").pipe(gulp.dest("D:\\phpStudy\\WWW\\gulpmiaTest\\dist\\php"));
+});
+
+//把所有的sql文件复制到发布目录下
+gulp.task("copy-sql",function () {
+    //复制文件
+    gulp.src("*.sql").pipe(gulp.dest("D:\\phpStudy\\WWW\\gulpmiaTest\\dist"));
+});
+//把所有的txt文件复制到发布目录下
+gulp.task("copy-txt",function () {
+    //复制文件
+    gulp.src("*.txt").pipe(gulp.dest("D:\\phpStudy\\WWW\\gulpmiaTest"));
 });
     
 
@@ -137,6 +147,8 @@ gulp.task("watchall",['sass','minify'],function () {
     gulp.watch("js/*.js",["copy-js"]);
     gulp.watch("scss/*.scss",["sassfile"]);
     gulp.watch("php/*.php",["copy-php"]);
+    gulp.watch("*.sql",["copy-sql"]);
+    gulp.watch("*.txt",["copy-txt"]);
     //gulp.watch(["js/index.js","js/goodlist.js"],["concatjs"]);//只要这两个js文件任何一个发生了变化，就执行concatjs
     //gulp.watch(["js/index.js","js/goodlist.js"],["concatanguglifyjs"]);
     //gulp.watch(["js/index.js","js/goodlist.js"],["concatanguglifyandrenamejs"]); //此函数有问题
